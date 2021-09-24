@@ -16,16 +16,16 @@ export class Header extends Component {
         <div class='navbarHeader'>
           <Navbar collapseOnSelect expand="lg" variant="light">
             <Container>
-              <Navbar.Brand href="#home" id='font'>Yalla Bike</Navbar.Brand>
-              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Brand href="#home"><Button id='logout' variant="asasas" onClick={this.handleShow}>
+                        Menu
+                      </Button></Navbar.Brand>
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
                   <Nav.Link href="#features">
                     <>
-                      <Button id='logout' variant="asasas" onClick={this.handleShow}>
-                        Menu
-                      </Button>
-                      <Offcanvas style={{ width: 300 }} show={this.state.setShow} onHide={this.handleClose}>
+                    <b id='font'>Yalla Bike</b>
+                    </>
+                    <Offcanvas style={{ width: 300 }} show={this.state.setShow} onHide={this.handleClose}>
                         <Offcanvas.Header closeButton>
                           <Offcanvas.Title id='fontoff'>Yalla Bike</Offcanvas.Title>
                         </Offcanvas.Header>
@@ -63,8 +63,7 @@ export class Header extends Component {
                           <br></br>
                           {this.props.auth0.isAuthenticated ? <></> : <LoginButton />}
                         </Offcanvas.Body>
-                      </Offcanvas>
-                    </>
+                      </Offcanvas>                    
                   </Nav.Link>
                 </Nav>
                 <Nav>

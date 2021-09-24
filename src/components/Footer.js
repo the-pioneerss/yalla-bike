@@ -9,16 +9,9 @@ export class Footer extends Component {
           <Navbar collapseOnSelect expand="lg" variant="light">
             <Container>
               <Navbar.Brand href="#home" id='font'>Yalla Bike</Navbar.Brand>
-              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-              <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="me-auto">
-                </Nav>
-                <Nav>
-                  <Nav.Link target="_blank" eventKey={2} href="https://github.com/the-pioneerss">
-                    <p class='font'>All Reserved CopyRight . © The-Pioneers</p>
-                  </Nav.Link>
-                </Nav>
-              </Navbar.Collapse>
+              <Nav.Link target="_blank" eventKey={2} href="https://github.com/the-pioneerss">
+                <p class='font'>All Reserved CopyRight . © The-Pioneers</p>
+              </Nav.Link>
             </Container>
           </Navbar>
         </div>
