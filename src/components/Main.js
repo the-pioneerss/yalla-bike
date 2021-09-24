@@ -58,22 +58,22 @@ export class Main extends Component {
         </Carousel>
         <Container>
           <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-              <Container>
-  <Row>
-    <Col>          <div class="container">
-                <Image class="mainIMG" width='100%' src="https://cdn.shopify.com/s/files/1/0021/1399/4815/files/mixte-button_670x_fb0f700e-170d-4480-9cca-579ca909aa37_590x.jpg?v=1532717793" rounded />
+          <Container>
+            <Row>
+              <Col>          <div class="container">
+                <Image class="mainIMG" style={{ width: 300 }} src="https://cdn.shopify.com/s/files/1/0021/1399/4815/files/mixte-button_670x_fb0f700e-170d-4480-9cca-579ca909aa37_590x.jpg?v=1532717793" rounded />
                 <div class="overlay">
                   <div class="text">Yalla Bike !!</div>
                 </div>
               </div></Col>
-    <Col>              <div class="container">
-                <Image width='100%' src="https://st4.depositphotos.com/5260065/25657/v/450/depositphotos_256570160-stock-illustration-beautiful-girl-with-glasses-riding.jpg" rounded />
+              <Col>              <div class="container">
+                <Image style={{ width: 300 }} src="https://st4.depositphotos.com/5260065/25657/v/450/depositphotos_256570160-stock-illustration-beautiful-girl-with-glasses-riding.jpg" rounded />
                 <div class="overlay">
                   <div class="text">Yalla Rent !!</div>
                 </div>
               </div></Col>
-  </Row>
-</Container>
+            </Row>
+          </Container>
         </Container>
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <Container>
@@ -93,7 +93,7 @@ export class Main extends Component {
                     <Tab.Pane eventKey="first">
                       <h6 class='lorem'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h6>
                     </Tab.Pane>
-</Tab.Content></Col></Row></Tab.Container></Col></Row>
+                  </Tab.Content></Col></Row></Tab.Container></Col></Row>
           <Row><Col></Col><Col></Col><Col></Col>
           </Row></Container>
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
@@ -103,15 +103,3 @@ export class Main extends Component {
   }
 }
 export default withAuth0(Main);
-/*
-          <Row>
-            <Col xs={6} md={5}>
-
-            </Col>
-            <Col xs={6} md={2}>
-            </Col>
-            <Col xs={6} md={5}>
-
-            </Col>
-          </Row>
-*/
