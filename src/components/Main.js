@@ -58,26 +58,22 @@ export class Main extends Component {
         </Carousel>
         <Container>
           <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-          <Row>
-            <Col xs={6} md={5}>
-              <div class="container">
-                <Image class="mainIMG" width='80%' src="https://cdn.shopify.com/s/files/1/0021/1399/4815/files/mixte-button_670x_fb0f700e-170d-4480-9cca-579ca909aa37_590x.jpg?v=1532717793" rounded />
+              <Container>
+  <Row>
+    <Col>          <div class="container">
+                <Image class="mainIMG" width='100%' src="https://cdn.shopify.com/s/files/1/0021/1399/4815/files/mixte-button_670x_fb0f700e-170d-4480-9cca-579ca909aa37_590x.jpg?v=1532717793" rounded />
                 <div class="overlay">
                   <div class="text">Yalla Bike !!</div>
                 </div>
-              </div>
-            </Col>
-            <Col xs={6} md={2}>
-            </Col>
-            <Col xs={6} md={5}>
-              <div class="container">
-                <Image width='80%' src="https://st4.depositphotos.com/5260065/25657/v/450/depositphotos_256570160-stock-illustration-beautiful-girl-with-glasses-riding.jpg" rounded />
+              </div></Col>
+    <Col>              <div class="container">
+                <Image width='100%' src="https://st4.depositphotos.com/5260065/25657/v/450/depositphotos_256570160-stock-illustration-beautiful-girl-with-glasses-riding.jpg" rounded />
                 <div class="overlay">
                   <div class="text">Yalla Rent !!</div>
                 </div>
-              </div>
-            </Col>
-          </Row>
+              </div></Col>
+  </Row>
+</Container>
         </Container>
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <Container>
@@ -107,4 +103,15 @@ export class Main extends Component {
   }
 }
 export default withAuth0(Main);
-//
+/*
+          <Row>
+            <Col xs={6} md={5}>
+
+            </Col>
+            <Col xs={6} md={2}>
+            </Col>
+            <Col xs={6} md={5}>
+
+            </Col>
+          </Row>
+*/

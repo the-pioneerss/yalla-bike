@@ -8,7 +8,6 @@ export class Footer extends Component {
         <div class='navbarFooter'>
           <Navbar collapseOnSelect expand="lg" variant="light">
             <Container>
-              <Navbar.Brand href="#home" id='font'>Yalla Bike</Navbar.Brand>
               <Nav.Link target="_blank" eventKey={2} href="https://github.com/the-pioneerss">
                 <p class='font'>All Reserved CopyRight . © The-Pioneers</p>
               </Nav.Link>
@@ -20,3 +19,4 @@ export class Footer extends Component {
   }
 }
 export default Footer
+//              <Navbar.Brand href="#home" id='font'>Yalla Bike</Navbar.Brand>
