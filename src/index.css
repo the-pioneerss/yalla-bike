@@ -6,8 +6,97 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+#FFONT{
+  background-color: #BD4B4B ;
+color : #F0E5CF ;
+}
+#FFONT:hover{
+  background-color: #C8C6C6 ;
+}
+.navbarHeader{
+  background-color: #4B6587 ;
+}
+.navbarFooter{
+  background-color: #4B6587 ;  
+}
+.lorem{
+  color : #4B6587;
+}
+#root{
+  background-color: #EEEEEE ;
+}
+#logout{
+  background-color: #BD4B4B ;
+}
+#navsbu{
+  background-color: white ;
+  display: block;
+}
+#navsbu:hover{
+  background-color: #BD4B4B ;
+
+}
+#logout:hover{
+  background-color: #C8C6C6 ;
+}
+.mainIMG{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.container{
+  position: relative;
+  width: 50%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+.container:hover .overlay {
+  opacity: 1;
+}
+.font{
+  font-family : 'Courgette' , cursive ;
+  color : #F0E5CF ;
+}
+#font{
+  font-family : 'Courgette' , cursive ;
+  color : #F0E5CF ;
+}
+#fontoff{
+  font-family : 'Courgette' , cursive ;
+}
+.text {
+  font-family : 'Courgette' , cursive ;
+  color: black ;
+  font-size: 25px;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: bolder ;
+}
+#userMail{
+  font-size: 12px ;
+  text-align : center ;
+}
+#userInfo{
+  text-align : center ;
 }

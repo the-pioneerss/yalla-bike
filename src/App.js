@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { withAuth0 } from '@auth0/auth0-react';
+import Main from './components/Main';
+import Header from './components/Header';
+export class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { setShow: false, tokenz: 0 }
+  }
+  render() {
+    return (
+      <>
+        {
+          this.props.auth0.isAuthenticated ?
+            <>
+              <Header picture={this.props.auth0.user.picture} name={this.props.auth0.user.name} myEmail={this.props.auth0.user.email} tokenz={this.state.tokenz} />
+            </>
+            : <Header />
+        }
+        <Main />
+      </>
+    )
+  }
 }
-
-export default App;
+export default withAuth0(App);
