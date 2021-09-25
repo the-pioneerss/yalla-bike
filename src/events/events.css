@@ -1,0 +1,49 @@
+/* .container1{
+position: relative;
+width: 800px;
+height: 100px;
+margin-top: 10px;
+display: flex;
+  }
+
+  .Carousal{ 
+    position: absolute;
+    margin-top: 10px;
+    justify-items: center;
+    height: fit-content;
+   
+justify-content: center;
+align-items: center;
+  } */
+ 
+
+.container1{
+position: relative;
+justify-content: center;
+align-items: center;
+width: 800px;
+background-image:url('https://st3.depositphotos.com/1008336/14159/v/600/depositphotos_141596822-stock-illustration-a-group-of-cyclists-in.jpg');
+ height: 300px;
+    background-size:contain;
+}
+
+
+  .container2{ padding: 5%;
+      position: absolute;
+      justify-items: center;
+margin-top: 30px;
+  left: 450px;
+  height: 250px;
+  width: 450px;
+  z-index: 1;
+  border: solid 1px gray;
+  color: black;
+background-color: rgb(236, 201, 185);
+opacity: 75%;
+border:none;
+font-size:25px;
+border-radius: 20%;
+    font-weight: bolder;
+}
+.text{
+}
