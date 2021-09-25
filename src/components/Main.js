@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withAuth0 } from '@auth0/auth0-react';
-import { Button, Nav, Tab, Carousel, Container, Row, Col, Image } from 'react-bootstrap';
+import { Button, Nav, Tab, Carousel, Container, Row, Col, Figure, Image } from 'react-bootstrap';
 import Footer from './Footer';
 export class Main extends Component {
   render() {
@@ -58,11 +58,27 @@ export class Main extends Component {
         </Carousel>
           <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
 
-<div id='sectionTwo'>
-<img id='sectionTwoImg'src="https://cdn.shopify.com/s/files/1/0021/1399/4815/files/mixte-button_670x_fb0f700e-170d-4480-9cca-579ca909aa37_590x.jpg?v=1532717793"></img>
-<img id='sectionTwoImg' src="https://st4.depositphotos.com/5260065/25657/v/450/depositphotos_256570160-stock-illustration-beautiful-girl-with-glasses-riding.jpg"></img>
-
-</div>
+<Container>
+  <Row>
+    <Col lg={5} md={5}>
+    <Figure.Image
+    width={300}
+    height={250}
+    alt="171x180"
+    src="https://st4.depositphotos.com/5260065/25657/v/450/depositphotos_256570160-stock-illustration-beautiful-girl-with-glasses-riding.jpg"
+  />    </Col>
+    <Col lg={1} md={1}>
+    </Col>
+    <Col lg={5} md={5}>
+      <br></br><br></br>
+    <Figure.Image
+    width={300}
+    height={250}
+    alt="171x180"
+    src="https://img.freepik.com/free-vector/boy-riding-bike-town-webstyle-background-summer-children-outdoor-activities-kid-riding-bicycle-summer-outside_207606-124.jpg?size=626&ext=jpg"
+  />    </Col>
+  </Row>
+</Container>
 
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <Container>
@@ -92,9 +108,3 @@ export class Main extends Component {
   }
 }
 export default withAuth0(Main);
-/*
-                <Image width='300' src="https://cdn.shopify.com/s/files/1/0021/1399/4815/files/mixte-button_670x_fb0f700e-170d-4480-9cca-579ca909aa37_590x.jpg?v=1532717793"/>
-
-                <Image class='sectionTwoImgTow' width='300' src="https://st4.depositphotos.com/5260065/25657/v/450/depositphotos_256570160-stock-illustration-beautiful-girl-with-glasses-riding.jpg"/>
-
-*/
