@@ -57,7 +57,6 @@ export class Main extends Component {
           </Carousel.Item>
         </Carousel>
           <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-
 <Container>
   <Row>
     <Col lg={5} md={5}>
@@ -79,7 +78,6 @@ export class Main extends Component {
   />    </Col>
   </Row>
 </Container>
-
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <Container>
           <Row>

@@ -36,7 +36,7 @@ color : #F0E5CF ;
   background-color: white ;
   display: block;
 }
-#navsbu:hover{
+#hov:hover{
   background-color: #BD4B4B ;
 
 }
@@ -89,7 +89,8 @@ color : #F0E5CF ;
 }
 .font{
   font-family : 'Courgette' , cursive ;
-  color : #F0E5CF ;
+  color : #EEEEEE ;
+  font-size: 12px ;
 }
 #font{
   font-family : 'Courgette' , cursive ;
