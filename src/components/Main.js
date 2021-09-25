@@ -56,25 +56,14 @@ export class Main extends Component {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-        <Container>
           <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-          <Container>
-            <Row>
-              <Col>          <div class="container">
-                <Image class="mainIMG" style={{ width: 300 }} src="https://cdn.shopify.com/s/files/1/0021/1399/4815/files/mixte-button_670x_fb0f700e-170d-4480-9cca-579ca909aa37_590x.jpg?v=1532717793" rounded />
-                <div class="overlay">
-                  <div class="text">Yalla Bike !!</div>
-                </div>
-              </div></Col>
-              <Col>              <div class="container">
-                <Image style={{ width: 300 }} src="https://st4.depositphotos.com/5260065/25657/v/450/depositphotos_256570160-stock-illustration-beautiful-girl-with-glasses-riding.jpg" rounded />
-                <div class="overlay">
-                  <div class="text">Yalla Rent !!</div>
-                </div>
-              </div></Col>
-            </Row>
-          </Container>
-        </Container>
+
+<div id='sectionTwo'>
+<img id='sectionTwoImg'src="https://cdn.shopify.com/s/files/1/0021/1399/4815/files/mixte-button_670x_fb0f700e-170d-4480-9cca-579ca909aa37_590x.jpg?v=1532717793"></img>
+<img id='sectionTwoImg' src="https://st4.depositphotos.com/5260065/25657/v/450/depositphotos_256570160-stock-illustration-beautiful-girl-with-glasses-riding.jpg"></img>
+
+</div>
+
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <Container>
           <Row>
@@ -103,3 +92,9 @@ export class Main extends Component {
   }
 }
 export default withAuth0(Main);
+/*
+                <Image width='300' src="https://cdn.shopify.com/s/files/1/0021/1399/4815/files/mixte-button_670x_fb0f700e-170d-4480-9cca-579ca909aa37_590x.jpg?v=1532717793"/>
+
+                <Image class='sectionTwoImgTow' width='300' src="https://st4.depositphotos.com/5260065/25657/v/450/depositphotos_256570160-stock-illustration-beautiful-girl-with-glasses-riding.jpg"/>
+
+*/
