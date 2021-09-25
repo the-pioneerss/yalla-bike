@@ -28,7 +28,7 @@ let arr1 = [
 
 class BR extends Component {
   render() {
-    // console.log(this.props.data)
+    console.log(this.props.gender)
     return (
       <Row>
         <div className="test">

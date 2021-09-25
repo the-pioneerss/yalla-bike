@@ -5,6 +5,7 @@ import BR from "./components/BR";
 import axios from "axios";
 import RentModal from "./components/RentModal";
 import RenteeModal from "./components/RenteeModal";
+// import { withAuth0 } from '@auth0/auth0-react';
 
 export class App extends Component {
   constructor(props) {
@@ -22,20 +23,20 @@ export class App extends Component {
       showModalNew: false,
       image: "",
       location: "",
-      gender:"Male"
+      gender:""
     };
   }
 
-  handleToast = () => {
-    this.setState({
-      showToast: !this.state.showToast,
-    });
-  };
-  handleToast2 = () => {
-    this.setState({
-      showToast2: !this.state.showToast2,
-    });
-  };
+  // handleToast = () => {
+  //   this.setState({
+  //     showToast: !this.state.showToast,
+  //   });
+  // };
+  // handleToast2 = () => {
+  //   this.setState({
+  //     showToast2: !this.state.showToast2,
+  //   });
+  // };
 
   handleShowModalRental = () => {
     this.setState({
@@ -70,17 +71,11 @@ export class App extends Component {
     });
   };
   handleGender = (e) => {
-    if(e.target.value=== "Male"){
+    e.preventDefault()
     this.setState({
-      gender:"Male",
-    });}
-    else {
-      this.setState({
-        gender:"Female",
-      });
-    }
-  };
-
+      gender:e.target.value
+    })
+  }
   componentDidMount = async () => {
     // if (this.props.auth0.isAuthenticated){
     const bikees = await axios.get(
@@ -119,7 +114,9 @@ export class App extends Component {
   };
 
   render() {
-    console.log(this.state.showRental);
+    // console.log(this.state.showRental);
+    // console.log(this.props.auth0);
+
     return (
       <>
         {/* <Profile showToast={this.state.showToast} handleToast={this.handleToast} showToast2={this.state.showToast2} handleToast2={this.handleToast2}/> */}
