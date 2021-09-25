@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Col, Row, Offcanvas, Button, Container, Navbar, Nav } from 'react-bootstrap';
+import {NavDropdown, Image, Col, Row, Offcanvas, Button, Container, Navbar, Nav } from 'react-bootstrap';
 import { withAuth0 } from '@auth0/auth0-react';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogOutButton';
@@ -10,41 +10,42 @@ export class Header extends Component {
   }
   handleShow = () => { this.setState({ setShow: true }) }
   handleClose = () => { this.setState({ setShow: false }) }
+  /*
+Copy
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Toggle top offcanvas</button>
+
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasTopLabel">Offcanvas top</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    ...
+  </div>
+</div>
+  */
   render() {
     return (
       <>
-        <div class='navbarHeader'>
-          <Navbar collapseOnSelect expand="lg" variant="light">
-            <Container>
-              <Navbar.Brand href="#home"><Button id='logout' variant="asasas" onClick={this.handleShow}>
-                        Menu
-                      </Button></Navbar.Brand>
-              <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="me-auto">
-                  <Nav.Link href="#features">
-                    <>
-                    <b id='font'>Yalla Bike</b>
-                    </>
-                    <Offcanvas style={{ width: 300 }} show={this.state.setShow} onHide={this.handleClose}>
-                        <Offcanvas.Header closeButton>
-                          <Offcanvas.Title id='fontoff'>Yalla Bike</Offcanvas.Title>
-                        </Offcanvas.Header>
-                        <Offcanvas.Body>
-                          <Button id='navsbu' variant="#E05D5D">
-                            Events
-                          </Button>
-                          <br></br>
-                          <Button id='navsbu' variant="#E05D5D">
-                            Yalla Rent
-                          </Button>
-                          {this.props.auth0.isAuthenticated ? <>
+        <Navbar collapseOnSelect expand="true" bg="dark" variant="dark">
+  <Container>
+  <Navbar.Brand href="#home" id='fontoff'>Yalla Bike</Navbar.Brand>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="me-auto">
+      <Nav.Link href="#features">Events</Nav.Link>
+      <Nav.Link href="#pricing">Yalla Rent</Nav.Link>
+    </Nav>
+    <Nav>
+      <Nav.Link href="#deets">
+      {this.props.auth0.isAuthenticated ? <>
                             <br></br>
                             <Container>
                               <Row>
                                 <Col xs={6} md={2}>
                                 </Col>
                                 <Col md={8}>
-                                  <Image width="100%" src={this.props.picture} roundedCircle />
+                                  <Image width="20%" src={this.props.picture} roundedCircle />
                                 </Col>
                                 <Col xs={6} md={2}>
                                 </Col>
@@ -62,16 +63,12 @@ export class Header extends Component {
                           }
                           <br></br>
                           {this.props.auth0.isAuthenticated ? <></> : <LoginButton />}
-                        </Offcanvas.Body>
-                      </Offcanvas>                    
-                  </Nav.Link>
-                </Nav>
-                <Nav>
-                </Nav>
-              </Navbar.Collapse>
-            </Container>
-          </Navbar>
-        </div>
+      </Nav.Link>
+    </Nav>
+  </Navbar.Collapse>
+  </Container>
+</Navbar>
+
       </>
     )
   }
