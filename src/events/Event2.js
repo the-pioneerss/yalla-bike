@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel, Button, Modal, Form, Card } from 'react-bootstrap';
-import CreateEvent from './CreateEvent';
 import Dialog from 'react-bootstrap-dialog'
 // but first install npm i react-bootstrap-dialog --save 
 import './events.css';
