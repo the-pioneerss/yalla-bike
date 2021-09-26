@@ -4,6 +4,10 @@
   "private": true,
   "dependencies": {
 
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@mui-treasury/components": "^1.10.1",
+
     "@restart/ui": "^0.2.3",
 
     "@auth0/auth0-react": "^1.8.0",
@@ -21,6 +25,8 @@
     "react-bootstrap-dialog": "^0.13.0",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "react-spring": "^9.2.4",
+    "react-spring-3d-carousel": "^1.2.1",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
