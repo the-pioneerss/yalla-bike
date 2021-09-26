@@ -34,10 +34,28 @@ color : #F0E5CF ;
   color : #4B6587;
 }
 #root{
-  background-color: #bcc9db ;
+  background-color: white ;
 }
 #offc{
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: yellow;
+}
+#GREEN{
+  background-color: #198754;
+}
+#YELLOW{
+  background-color: #FFC107;
+}
+#BLUE{
+  background-color: #0DCAF0;
+}
+#DARK{
+  background-color: #212529;
+}
+#LIGHT{
+  background-color: white;
+}
+#RED{
+  background-color: #DC3545;
 }
 #logout{
   background-color: #BD4B4B ;

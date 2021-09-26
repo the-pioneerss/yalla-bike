@@ -71,7 +71,7 @@ export class Main extends Component {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-        <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+        <br></br><br></br><br></br>
         <section className="section section-lg pt-lg-0 mt--200">
           <Container>
             <Row className="justify-content-center">
@@ -86,7 +86,6 @@ export class Main extends Component {
                           Yalla Rent !!
                         </h6>
                         <p className="description mt-3">
-                          loremipsum loremipsum loremipsum loremipsum
                           loremipsum loremipsum loremipsum loremipsum
                           loremipsum loremipsum loremipsum loremipsum
                         </p>
@@ -260,7 +259,6 @@ export class Main extends Component {
                 })
               }
             </div></section><br></br><br></br></section>
-        <Footer />
       </>
     )
   }
