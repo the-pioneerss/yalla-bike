@@ -118,6 +118,10 @@ background-color: #a1b4ce;
   margin : 30px ;
   width : 100% ;
 }
+#logo{
+  margin-right: 80%;
+  display:inline-block ;
+}
 .font{
   font-family : 'Courgette' , cursive ;
   color : #EEEEEE ;
