@@ -20,14 +20,24 @@ color : #F0E5CF ;
 .navbarHeader{
   background-color: #4B6587 ;
 }
+#nnee{
+  margin: 50px ;
+}
 .navbarFooter{
   background-color: #4B6587 ;  
+}
+.ggrriidd{
+  display:grid ;
+  grid-auto-columns: 40% 40%;
 }
 .lorem{
   color : #4B6587;
 }
 #root{
-  background-color: white ;
+  background-color: #bcc9db ;
+}
+#offc{
+  background-color: rgba(255, 255, 255, 0.6);
 }
 #logout{
   background-color: #BD4B4B ;
@@ -43,11 +53,6 @@ color : #F0E5CF ;
 #logout:hover{
   background-color: #C8C6C6 ;
 }
-/*#sectionTwo{
-  display: inline-block ;
-  padding-left: 20% ;
-  margin:10px ;
-}*/
 #sectionTwo{
   display: grid ;
   grid-template-columns: auto auto;
@@ -58,9 +63,6 @@ color : #F0E5CF ;
   height : 80% ;
   margin-left: 20%;
 }
-/*.sectionTwoImgTow{
-  padding-left: 30% ;
-}*/
 .mainIMG{
     opacity: 1;
     display: block;
@@ -86,6 +88,17 @@ color : #F0E5CF ;
 }
 .container:hover .overlay {
   opacity: 1;
+}
+
+.newSection{
+background-color: #a1b4ce;
+}
+#roow{
+ margin : 55px ;
+}
+#news{
+  margin : 30px ;
+  width : 100% ;
 }
 .font{
   font-family : 'Courgette' , cursive ;

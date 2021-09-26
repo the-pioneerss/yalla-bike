@@ -1,12 +1,27 @@
 import React, { Component } from 'react';
+import Axios from 'axios';
 import { withAuth0 } from '@auth0/auth0-react';
-import { Button, Nav, Tab, Carousel, Container, Row, Col, Figure, Image } from 'react-bootstrap';
+import { CardImg, Badge, Card, Button, Carousel, Container, Row, Col } from 'react-bootstrap';
 import Footer from './Footer';
+const NEWS = process.env.REACT_APP_BACKEND_URL_NEWS;
 export class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      news: []
+    }
+  }
+  componentDidMount = () => {
+    Axios.get(`http://${NEWS}`).then(res => {
+      this.setState({
+        news: res.data.cache.data
+      })
+    })
+  }
   render() {
     return (
       <>
-        <Carousel fade>
+        <Carousel fade interval={1000}>
           <Carousel.Item>
             <img
               className="d-block w-100"
@@ -56,50 +71,195 @@ export class Main extends Component {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-          <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-<Container>
-  <Row>
-    <Col lg={5} md={5}>
-    <Figure.Image
-    width={300}
-    height={250}
-    alt="171x180"
-    src="https://st4.depositphotos.com/5260065/25657/v/450/depositphotos_256570160-stock-illustration-beautiful-girl-with-glasses-riding.jpg"
-  />    </Col>
-    <Col lg={1} md={1}>
-    </Col>
-    <Col lg={5} md={5}>
-      <br></br><br></br>
-    <Figure.Image
-    width={300}
-    height={250}
-    alt="171x180"
-    src="https://img.freepik.com/free-vector/boy-riding-bike-town-webstyle-background-summer-children-outdoor-activities-kid-riding-bicycle-summer-outside_207606-124.jpg?size=626&ext=jpg"
-  />    </Col>
-  </Row>
-</Container>
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-        <Container>
-          <Row>
-            <Col><Tab.Container id="left-tabs-example" defaultActiveKey="first">
-              <Row>
-                <Col sm={3}>
-                  <Nav className="flex-column">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first"><Button id='FFONT' variant="#E05D5D">
-                        Why Us ?</Button></Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                </Col>
-                <Col sm={9}>
-                  <Tab.Content>
-                    <Tab.Pane eventKey="first">
-                      <h6 class='lorem'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h6>
-                    </Tab.Pane>
-                  </Tab.Content></Col></Row></Tab.Container></Col></Row>
-          <Row><Col></Col><Col></Col><Col></Col>
-          </Row></Container>
-        <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+        <section className="section section-lg pt-lg-0 mt--200">
+          <Container>
+            <Row className="justify-content-center">
+              <Col lg="12">
+                <Row className="row-grid">
+                  <Col lg="4">
+                    <Card className="card-lift--hover shadow border-0">
+                      <Card.Body className="py-4">
+                        <CardImg variant='top' src='https://bikerentalmanager.com/wp-content/uploads/BikeApp_DM_DepositphotosSmall-900x450.png' height='160' />
+                        <br></br><br></br>
+                        <h6 className="text-danger text-uppercase">
+                          Yalla Rent !!
+                        </h6>
+                        <p className="description mt-3">
+                          loremipsum loremipsum loremipsum loremipsum
+                          loremipsum loremipsum loremipsum loremipsum
+                          loremipsum loremipsum loremipsum loremipsum
+                        </p>
+                        <div>
+                          <Badge color="success" pill className="mr-1">
+                            Business
+                          </Badge>
+                          <Badge color="success" pill className="mr-1">
+                            Go
+                          </Badge>
+                          <Badge color="success" pill className="mr-1">
+                            useful
+                          </Badge>
+                        </div>
+                        <Button
+                          className="mt-4"
+                          variant="danger"
+                          href="https://horned-beast-animal.netlify.app/"
+                          target="_blank"
+                        >Go....
+                        </Button>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                  <Col lg="3">
+                  </Col>
+                  <Col lg="4">
+                    <Card className="card-lift--hover shadow border-0">
+                      <Card.Body className="py-4">
+                        <CardImg variant='top' src='https://visitelizabethcity.com//images/event_photos/Tarwheel2019_riverfront.jpg' height='160' />
+                        <br></br><br></br>
+                        <h6 className="text-success text-uppercase">
+                          Yalaa Events !!
+                        </h6>
+                        <p className="description mt-3">
+                          loremipsum loremipsum loremipsum loremipsum
+                          loremipsum loremipsum loremipsum loremipsum
+                          loremipsum loremipsum loremipsum loremipsum
+                        </p>
+                        <div>
+                          <Badge color="success" pill className="mr-1">
+                            Family
+                          </Badge>
+                          <Badge color="success" pill className="mr-1">
+                            Enjoy
+                          </Badge>
+                          <Badge color="success" pill className="mr-1">
+                            Groups
+                          </Badge>
+                        </div>
+                        <Button
+                          className="mt-4"
+                          variant="success"
+                          href="https://our-passion.github.io/library/index"
+                          target="_blank"
+                        >
+                          Go....
+                        </Button>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+        <blockquote className="card-blockquote">
+          <svg
+            className="svg-bg success"
+            preserveAspectRatio="none"
+            viewBox="0 0 583 95"
+          >
+            <polygon
+              className="fill-default "
+            />
+            <polygon
+              variant='danger'
+              color='yellow'
+              className="bg-success"
+              opacity=".2"
+              points="0,42 583,95 683,0 0,95"
+            />
+          </svg>
+        </blockquote>
+        <section className="section pb-0 bg-gradient-danger"></section>
+        <section className="section bg-light">
+          <Container>
+            <Row className="row-grid align-items-center">
+              <Col md="6">
+                <Card className="bg-default shadow border-0">
+                  <CardImg
+                    alt="..."
+                    src="https://i.pinimg.com/564x/80/6b/8b/806b8b775e4470621a684d59766c4699.jpg"
+                    top
+                  />
+                  <blockquote className="card-blockquote bg-success">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="svg-bg-danger"
+                      preserveAspectRatio="none"
+                      viewBox="0 0 583 95"
+                    >
+                      <polygon
+                        className="fill-danger"
+                        opacity=".2"
+                        points="0,42 583,95 683,0 0,95"
+                      />
+                    </svg>
+                    <h6 className="display-6 font-weight-bold text-dark">
+                      Stay healthy and use bike
+                    </h6>
+                  </blockquote>
+                </Card>
+              </Col>
+              <Col md="5">
+                <div className="pl-md-5">
+                  <div className="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
+                    <i className="ni ni-settings" /></div>
+                  <h3 className="text-center">Why US !?</h3>
+                  <p className="text-center">
+                    orem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    orem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    orem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    orem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    orem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    orem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    orem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    orem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    orem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    orem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    orem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    orem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    orem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                    orem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+                  </p>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+        <br></br><br></br><br></br><br></br>
+        <section class='newSection'>
+          <br></br><br></br><br></br><br></br><br></br>
+          <section class='section'>
+            <div className='row'>
+              {
+                this.state.news.map(item => {
+                  return <>
+                    <Col id='nnee' lg="5">
+                      <Card className="card-lift--hover shadow border-0">
+                        <Card.Body className="py-4">
+                          <br></br><br></br>
+                          <h6 variant='top' className="text-danger text-uppercase">{item.title}</h6>
+                          <p className="description mt-3">{item.description}</p>
+                          <div>
+                            <Badge color="primary" pill className="mr-1">
+                              {item.sourseName}
+                            </Badge>
+                          </div>
+                          <Button
+                            className="mt-4"
+                            variant="danger"
+                            href={item.sourseUrl}
+                            target="_blank"
+                          >Show
+                          </Button>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  </>
+                })
+              }
+            </div></section><br></br><br></br></section>
         <Footer />
       </>
     )

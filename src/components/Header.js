@@ -19,8 +19,8 @@ export class Header extends Component {
               <img
                 alt=""
                 src="https://cdn-icons-png.flaticon.com/512/706/706170.png"
-                width="30"
-                height="30"
+                width="27"
+                height="27"
                 className="d-inline-block align-top"
               />{' '}
               Yalla Bike</Navbar.Brand>
@@ -29,7 +29,7 @@ export class Header extends Component {
               <Nav placement={'bottom'} className="me-auto">
                 <Nav.Link href="#pricing" id='hov'>
                   <>
-                    <Offcanvas style={{ width: 300 }} show={this.state.setShow} onHide={this.handleClose}>
+                    <Offcanvas id='offc' style={{ width: 300 }} show={this.state.setShow} onHide={this.handleClose}>
                       <Offcanvas.Header closeButton>
                         <Offcanvas.Title id='fontoff'>Yalla Bike</Offcanvas.Title>
                       </Offcanvas.Header>
@@ -72,7 +72,6 @@ export class Header extends Component {
                 </Nav.Link>
               </Nav>
               <Nav>
-
               </Nav>
             </Navbar.Collapse>
           </Container>

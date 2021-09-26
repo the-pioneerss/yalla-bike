@@ -1,12 +1,21 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Navbar, Nav } from 'react-bootstrap';
+import {
+  Button,
+  Card,
+  CardImg,
+  NavItem,
+  NavLink,
+  Row,
+  Col,
+} from "react-bootstrap";
 export class Footer extends Component {
   render() {
     return (
       <>
         <Navbar bg="dark" variant="dark">
-          <Container>F
+          <Container>
             <Navbar.Brand id='fontoff' href="#home">
               <img
                 alt=""
