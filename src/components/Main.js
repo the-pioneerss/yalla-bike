@@ -1,8 +1,11 @@
+import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import Axios from 'axios';
 import { withAuth0 } from '@auth0/auth0-react';
+import Footer from './Footer';
 import { CardImg, Badge, Card, Button, Carousel, Container, Row, Col } from 'react-bootstrap';
-const NEWS = process.env.REACT_APP_BACKEND_URL_NEWS;
+const NEWS = process.env.REACT_APP_BACKEND_URL;
+
 export class Main extends Component {
   constructor(props) {
     super(props);
@@ -11,7 +14,7 @@ export class Main extends Component {
     }
   }
   componentDidMount = () => {
-    Axios.get(`http://${NEWS}`).then(res => {
+    Axios.get(`https://${NEWS}/articls`).then(res => {
       this.setState({
         news: res.data.cache.data
       })
@@ -20,6 +23,7 @@ export class Main extends Component {
   render() {
     return (
       <>
+        {console.log(`https://${NEWS}`)}
         <Carousel fade interval={1000}>
           <Carousel.Item>
             <img
@@ -83,8 +87,9 @@ export class Main extends Component {
                       <Button
                         className="mt-4"
                         variant="light"
-                        href="https://our-passion.github.io/library/index"
-                        target="_blank"
+                        tag={Link} 
+                        to="/rent" 
+                        href="/rent"
                       >
                         <Card.Body className="py-4">
                           <CardImg variant='top' src='https://bikerentalmanager.com/wp-content/uploads/BikeApp_DM_DepositphotosSmall-900x450.png' height='160' />
@@ -107,9 +112,11 @@ export class Main extends Component {
                       <Button
                         className="mt-4"
                         variant="light"
-                        href="https://our-passion.github.io/library/index"
-                        target="_blank"
-                      >
+                        tag={Link} 
+                        to="/event" 
+                        href="/event"
+                          >
+                        
                         <Card.Body className="py-4">
                           <CardImg variant='top' src='https://visitelizabethcity.com//images/event_photos/Tarwheel2019_riverfront.jpg' height='160' />
                           <br></br><br></br>
@@ -130,7 +137,7 @@ export class Main extends Component {
         </section>
         <br></br><br></br><br></br><br></br>
         <section className="section pb-0 bg-gradient-danger"></section>
-        <section className="section bg-light">
+        <section class="whyUssImg">
           <Container>
             <Row className="row-grid align-items-center">
               <Col md="6">
@@ -164,8 +171,7 @@ export class Main extends Component {
               </Col>
             </Row>
           </Container>
-        </section>
-        <br></br><br></br><br></br><br></br><br></br><br></br>
+       <br/><br/> </section>
         <section class='newSection'>
           <br></br><br></br>
           <h1 id='fontoff' className="text-center">Why We Are Doing This ?!</h1>
@@ -181,17 +187,12 @@ export class Main extends Component {
                           <br></br><br></br>
                           <h6 variant='top' className="text-danger text-uppercase">"{item.title}"</h6>
                           <p className="description mt-3">{item.description}</p>
-                          <div>
-                            <Badge color="primary" pill className="mr-1">
-                              {item.sourseName}
-                            </Badge>
-                          </div>
                           <Button
                             className="mt-4"
-                            variant="danger"
+                            id='buttonNews'
                             href={item.sourseUrl}
                             target="_blank"
-                          >Show
+                          >Show Full Article 
                           </Button>
                         </Card.Body>
                       </Card>
@@ -199,7 +200,12 @@ export class Main extends Component {
                   </>
                 })
               }
+              <br/>
+    <h4 id='lastPMain' className="text-center">With The Increase In The Earths' Temperature And The Deadly Results We See In The News On Daily Basis From The Pollution We As A Youth Have To Step Up And Help The Planet We Live On So We All Can Survive!<br/>Join Our Community And Help Us Save Planet Earth!
+    </h4>
+
             </div></section><br></br><br></br></section>
+        <Footer />
       </>
     )
   }

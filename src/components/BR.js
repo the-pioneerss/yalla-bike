@@ -11,8 +11,7 @@ import {
 } from "react-bootstrap";
 import "./Profile.css";
 import axios from "axios";
-import WeatherModal from "./WeatherModal";
-
+const NEWS = process.env.REACT_APP_BACKEND_URL;
 
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, "0");
@@ -33,11 +32,10 @@ class BR extends Component {
       place: "",
     };
   }
-
   handleFilter = async (e) => {
     let a = e.target.value;
 
-    let weatherUrl = `http://localhost:8080/weather?city=${a}&key=b60ecd2934aa4f368ac3ae5dbe35`;
+    let weatherUrl = `https://${NEWS}/weather?city=${a}&key=${process.env.REACT_APP_WEATHER_KEY}`;
     {
       await axios.get(weatherUrl).then((res) => {
         this.setState({
@@ -116,7 +114,7 @@ class BR extends Component {
                       <section className="filter">
                         <article className="event">
                           <header>
-                            <img src={element.image} alt="PP" />
+                            <img className='test' src={element.image} alt="PP" />
                           </header>
                           <div className="details">
                             <h3 className="date">{today}</h3>
@@ -150,6 +148,7 @@ class BR extends Component {
             </Row>
             <h2 className="lists"> All Rentals In Jordan:</h2>
           </div>
+{console.log('DATAA : ',this.props.data)}
 
           {this.props.data.map((e) => {
             return (
@@ -158,7 +157,7 @@ class BR extends Component {
                   <section className="filter">
                     <article className="event">
                       <header>
-                        <img src={e.image} alt="PP" />
+                        <img src={e.image} alt="PP" className='test' />
                       </header>
                       <div className="details">
                         <h3 className="date">{today}</h3>
@@ -172,12 +171,27 @@ class BR extends Component {
                         <h4 className="price">1.5$/Hr</h4>
                       </div>
                       <footer>
+                        {/* 0000000000000000000000000000 */}
+
+{ this.props.name === e.username ?
+                      <Button
+                      onClick={() => this.props.deleteBike(e._id)}
+                          className="yalla"
+                          variant='danger'
+                        >
+                          Delete
+                        </Button>
+                        :
+
                         <Button
                           onClick={this.props.handleShowModalRental}
                           className="yalla"
                         >
                           Yalla Bike!
                         </Button>
+}   
+                        {/*  0000000000000000000000000000*/}
+
                       </footer>
                     </article>
                   </section>

@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import './App.css';
 import RentModal from "./components/RentModal";
 import RenteeModal from "./components/RenteeModal";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { withAuth0 } from '@auth0/auth0-react';
-import WeatherModal from "./components/WeatherModal";
 import BR from "./components/BR";
 import Main from './components/Main';
 import Header from './components/Header';
-import Footer from './components/Footer' ;
+import Footer from './components/Footer';
 import Event2 from './events/Event2';
 import AboutUs from './events/AboutUs';
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {Alert} from 'react-bootstrap' ;
 
 export class App extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-       setShow: false , 
+      setShow: false,
       showToast: false,
       showToast2: false,
       data: [],
@@ -40,6 +38,7 @@ export class App extends Component {
       weatherData: [],
       lat: "",
       lon: "",
+      showButton : true,
       locationWeather: "",
       Phone: "",
     };
@@ -63,6 +62,7 @@ export class App extends Component {
   handleCloseModalRental = () => {
     this.setState({
       showRental: false,
+      showButton:false,
     });
   };
 
@@ -150,7 +150,7 @@ export class App extends Component {
   componentDidMount = async () => {
     // if (this.props.auth0.isAuthenticated){
     const bikees = await axios.get(
-      `${process.env.REACT_APP_BACKEND_URL}/bikes`
+      `https://${process.env.REACT_APP_BACKEND_URL}/bikes`
     );
     this.setState({
       data: bikees.data,
@@ -165,6 +165,9 @@ export class App extends Component {
   // };
 
   addBike = async (event) => {
+    event.preventDefault();
+    console.log('ADDDD');
+
     const bikeFromData = {
       username: this.props.auth0.user.name,
       location: this.state.location,
@@ -174,95 +177,209 @@ export class App extends Component {
     };
 
     let newBikes = await axios.post(
-      `${process.env.REACT_APP_BACKEND_URL}/create`,
+      `https://${process.env.REACT_APP_BACKEND_URL}/create`,
       bikeFromData
     );
-
     this.setState({
       data: newBikes.data,
       showModalNew: false,
       locationWeather: this.state.location,
     });
   };
-
-  deleteBike = async (event) => {
+  deleteBike = async (id) => {
+    console.log('DDDDDDDDD');
+    let bikeId = id ;
     let newBikes = await axios.delete(
-      `${process.env.REACT_APP_BACKEND_URL}/delete/${this.state.id}`
+      `https://${process.env.REACT_APP_BACKEND_URL}/delete/${bikeId}`
     );
-
     this.setState({
       data: newBikes.data,
     });
   };
 
- 
   render() {
 
     return (
-      <>
-       {
+
+      <Router>
+        <Switch>
+
+        <Route exact path='/'>
+        {
           this.props.auth0.isAuthenticated ?
             <>
               <Header picture={this.props.auth0.user.picture} name={this.props.auth0.user.name} myEmail={this.props.auth0.user.email} tokenz={this.state.tokenz} />
-            </>
-            : <Header />
+              <Main /> </>
+            : <><Header /><Main /></>
         }
-        <Main />     
-        {this.props.auth0.isAuthenticated && (
-          <BR
-            data={this.state.data}
-            dataBikes={this.state.dataBikes}
-            deleteBike={this.deleteBike}
-            showRental={this.state.showRental}
-            showModalNew={this.state.showModalNew}
-            handleShowModalRental={this.handleShowModalRental}
-            handleCloseModalRental={this.handleCloseModalRental}
-            handleShowModalNew={this.handleShowModalNew}
-            handleCloseModalNew={this.handleCloseModalNew}
-            gender={this.state.gender}
-            name={this.props.auth0.user.name}
-            icons={this.state.icons}
-            otherData={this.otherData}
-            handleShowWeather={this.handleShowWeather}
-            showWeather={this.state.showWeather}
-            weatherData={this.state.weatherData}
-          />
-        )}
-        {this.state.showRental && (
-          <RentModal
-            data={this.state.data}
-            showRental={this.state.showRental}
-            showModalNew={this.state.showModalNew}
-            handleCloseModalRental={this.handleCloseModalRental}
-            handleDuration={this.handleDuration}
-            handleGender={this.handleGender}
-            price={this.state.price}
-            handleShowWeather={this.handleShowWeather}
-          />
-        )}
-        {this.state.showModalNew && (
-          <RenteeModal
-            data={this.state.data}
-            handleShowModalNew={this.handleShowModalNew}
-            showModalNew={this.state.showModalNew}
-            addBike={this.addBike}
-            handleCloseModalNew={this.handleCloseModalNew}
-            image={this.state.image}
-            handleLocation={this.handleLocation}
-            location={this.state.location}
-            handleGender={this.handleGender}
-            handlePhone={this.handlePhone}
-          />
-        )}
-             
-       
-             <div>
-        {/* <Event2 /> */}
-        <AboutUs/>
-      </div>
-        <Footer />
-      </>
+        </Route>
+        <Route  path='/home'>
+        {
+          this.props.auth0.isAuthenticated ?
+            <>
+              <Header picture={this.props.auth0.user.picture} name={this.props.auth0.user.name} myEmail={this.props.auth0.user.email} tokenz={this.state.tokenz} />
+              <Main /> </>
+            : <><Header /><Main /></>
+        }
+        </Route>
+          <Route  path='/rent'>
+          {
+          this.props.auth0.isAuthenticated ?
+            <>
+                          <Header picture={this.props.auth0.user.picture} name={this.props.auth0.user.name} myEmail={this.props.auth0.user.email} tokenz={this.state.tokenz} />
+
+              <BR
+                        showButton={this.state.showButton}
+
+          data={this.state.data}
+          dataBikes={this.state.dataBikes}
+          deleteBike={this.deleteBike}
+          showRental={this.state.showRental}
+          showModalNew={this.state.showModalNew}
+          handleShowModalRental={this.handleShowModalRental}
+          handleCloseModalRental={this.handleCloseModalRental}
+          handleShowModalNew={this.handleShowModalNew}
+          handleCloseModalNew={this.handleCloseModalNew}
+          gender={this.state.gender}
+          name={this.props.auth0.user.name}
+          icons={this.state.icons}
+          otherData={this.otherData}
+          handleShowWeather={this.handleShowWeather}
+          showWeather={this.state.showWeather}
+          weatherData={this.state.weatherData}
+id={this.state.id}
+        />
+        {
+      this.state.showRental && (
+        <RentModal
+          data={this.state.data}
+          showRental={this.state.showRental}
+          showModalNew={this.state.showModalNew}
+          handleCloseModalRental={this.handleCloseModalRental}
+          handleDuration={this.handleDuration}
+          handleGender={this.handleGender}
+          price={this.state.price}
+          handleShowWeather={this.handleShowWeather}
+          showButton={this.state.showButton}
+        />
+      )
+    }
+    {
+      this.state.showModalNew && (
+        <RenteeModal
+          data={this.state.data}
+          handleShowModalNew={this.handleShowModalNew}
+          showModalNew={this.state.showModalNew}
+          addBike={this.addBike}
+          handleCloseModalNew={this.handleCloseModalNew}
+          image={this.state.image}
+          handleLocation={this.handleLocation}
+          location={this.state.location}
+          handleGender={this.handleGender}
+          handlePhone={this.handlePhone}
+          showButton={this.state.showButton}
+        />
+      )
+    }<Footer />
+        </>
+            : <><Header />
+            <Alert  variant='danger'>
+    Please LLog In First !
+  </Alert>  <Main /></>
+          }
+          </Route>
+          <Route path='/event'>
+          {
+          this.props.auth0.isAuthenticated ?
+            <>
+                          <Header picture={this.props.auth0.user.picture} name={this.props.auth0.user.name} myEmail={this.props.auth0.user.email} tokenz={this.state.tokenz} />
+                          <Event2 />
+                          <Footer />    </>
+            : <><Header />
+            <Alert  variant='danger'>
+    Please LLog In First !
+  </Alert>  <Main /></>
+          }
+          </Route>
+          <Route path='/aboutus'>
+          {
+          this.props.auth0.isAuthenticated ?
+            <>
+                          <Header picture={this.props.auth0.user.picture} name={this.props.auth0.user.name} myEmail={this.props.auth0.user.email} tokenz={this.state.tokenz} />
+                          <AboutUs />
+                          <Footer /></>
+            : <><Header />
+           <AboutUs /><Footer /></>
+          }
+          </Route>
+        </Switch>
+      </Router>
+
      )
   }
 }
 export default withAuth0(App);
+/*
+<>
+      
+        {
+      this.props.auth0.isAuthenticated && (
+        <BR
+          data={this.state.data}
+          dataBikes={this.state.dataBikes}
+          deleteBike={this.deleteBike}
+          showRental={this.state.showRental}
+          showModalNew={this.state.showModalNew}
+          handleShowModalRental={this.handleShowModalRental}
+          handleCloseModalRental={this.handleCloseModalRental}
+          handleShowModalNew={this.handleShowModalNew}
+          handleCloseModalNew={this.handleCloseModalNew}
+          gender={this.state.gender}
+          name={this.props.auth0.user.name}
+          icons={this.state.icons}
+          otherData={this.otherData}
+          handleShowWeather={this.handleShowWeather}
+          showWeather={this.state.showWeather}
+          weatherData={this.state.weatherData}
+        />
+      )
+    }
+    {
+      this.state.showRental && (
+        <RentModal
+          data={this.state.data}
+          showRental={this.state.showRental}
+          showModalNew={this.state.showModalNew}
+          handleCloseModalRental={this.handleCloseModalRental}
+          handleDuration={this.handleDuration}
+          handleGender={this.handleGender}
+          price={this.state.price}
+          handleShowWeather={this.handleShowWeather}
+        />
+      )
+    }
+    {
+      this.state.showModalNew && (
+        <RenteeModal
+          data={this.state.data}
+          handleShowModalNew={this.handleShowModalNew}
+          showModalNew={this.state.showModalNew}
+          addBike={this.addBike}
+          handleCloseModalNew={this.handleCloseModalNew}
+          image={this.state.image}
+          handleLocation={this.handleLocation}
+          location={this.state.location}
+          handleGender={this.handleGender}
+          handlePhone={this.handlePhone}
+        />
+      )
+    }
+
+
+    <div>
+      {/* <Event2 /> *//*}
+      <AboutUs />
+    </div>
+        
+</>
+*/

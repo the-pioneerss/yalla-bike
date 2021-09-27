@@ -6,9 +6,10 @@ export class Footer extends Component {
   render() {
     return (
       <>
-        <Navbar bg='dark' variant='dark' id="responsive-navbar-nav">
+        <div class='navbarr'>
+        <Navbar id="responsive-navbar-nav">
           <Container>
-            <Navbar.Brand id='fontoff' href="#home">
+            <Navbar.Brand class='font' href="#home">
               <img
                 alt=""
                 src="https://cdn-icons-png.flaticon.com/512/706/706170.png"
@@ -17,11 +18,12 @@ export class Footer extends Component {
                 className="d-inline-block align-top"
               />{' '}
               Yalla Bike</Navbar.Brand>
-            <p class='font'></p>
             <Nav.Link target="_blank" href="https://github.com/the-pioneerss"><p class='font'>All Reserved CopyRight . © The-Pioneers</p></Nav.Link>
           </Container>
         </Navbar>
+        </div>
       </>
+      
     )
   }
 }

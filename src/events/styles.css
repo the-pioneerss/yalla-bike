@@ -1,14 +1,14 @@
-
+  
 body{
   width: 100%;
 }
-.mainContainer{
+/* .mainContainer{
   margin: 10px;
   width: 80%;
 margin-left: 5%;
   
-}
-.card1{
+} */
+ .card1{
   text-align: center;
   display: flex;
   justify-items:  center;
@@ -19,8 +19,8 @@ background-image: url('https://besthqwallpapers.com/Uploads/30-10-2017/26207/thu
 /* background-image: url('https://www.studyinternational.com/wp-content/uploads/2018/05/tim-mossholder-160547-unsplash-2.jpg'); */
 background-size: cover;
 background-position: right;
-margin-left: 5%;
-}
+/*margin-left: 5%;*/
+} 
 .card2{
   text-align: center;
   display: flex;
@@ -29,15 +29,8 @@ margin-left: 5%;
   justify-content: center;
   height: 200px;
 background-color: lemonchiffon;
-margin-left: 5%;
 }
-h1 {
-  background: white;
-  color: rgb(247, 108, 108);;
-  text-align: center;
- margin-top: 10px;
-  padding: 0.5em;
-}
+
 
 
 .sec{
@@ -64,7 +57,6 @@ justify-content: center;
     justify-content: center;
   }
   .but1{
-
    margin-right: 20px;
   }
   .buto{font-weight: bolder;
@@ -73,12 +65,10 @@ justify-content: center;
   margin-bottom: 30px;
   }
 .mainBox{ align-content: center;
-margin-left: 5%;
    width: 100%;
   display: flex;
   float: left;
   margin-bottom: 5%;
- 
 }
 .imgs{
   height: 200px;
@@ -86,6 +76,14 @@ margin-left: 5%;
 .subCont{ 
   padding: 10px;
   margin: 10px;
-  background-color: rgb(202, 88, 88);
-  color: white;
+
+}
+.teamTitle{
+  margin : auto ;
+  text-align: center;
+  margin-bottom : 20px ;
+}
+.GITHUB{
+  background-image: url('https://e7.pngegg.com/pngimages/914/758/png-clipart-github-social-media-computer-icons-logo-android-github-logo-computer-wallpaper-thumbnail.png');
+
 }

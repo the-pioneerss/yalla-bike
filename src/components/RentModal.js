@@ -67,9 +67,13 @@ class RentModal extends Component {
                   readOnly
                 />
               </Form.Group>
-              <Button variant="primary" type="submit">
+{this.props.showButton ? <Button variant="primary" type="submit">
                 Yalla Bike!
               </Button>
+              :<><Button disabled variant="success" type="submit">
+          Rented
+            </Button></>
+  }
             </Form>
           </Modal.Body>
           <Modal.Footer>
@@ -77,7 +81,7 @@ class RentModal extends Component {
               variant="danger"
               onClick={this.props.handleCloseModalRental}
             >
-              Close
+            Close
             </Button>
           </Modal.Footer>
         </Modal>
@@ -85,5 +89,11 @@ class RentModal extends Component {
     );
   }
 }
-
 export default RentModal;
+/*
+{this.props.showButton ? <Button variant="primary" type="submit">
+                Yalla Bike!
+              </Button>
+              :<></>
+  }           
+*/

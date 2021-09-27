@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { useHistory } from 'react-router';
 import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Carousel, Button, Modal, Form, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import image1 from '../events/1.jpeg';
 import image2 from '../events/2.jpeg';
 import image3 from '../events/3.jpeg';
@@ -15,25 +15,13 @@ import image5 from '../events/5.jpg';
 // }
 
 export class AboutUs extends Component {
-  constructor(props) {
-    super(props);
-
-    //  history = useHistory();
-
-
-  }
-
   render() {
     return (
       <div className="mainContainer">
-        <Card style={{ width: '100%' }} className="card1">
-          <Card.Body>
-            <Card.Title style={{ fontSize: '30px' }} className="sec" > Our Vision is to simplify and improve the lives of people. </Card.Title>
-          </Card.Body>
-        </Card>
-        <h1 className="title">Meet Our Team </h1>
+
+        <h1 className="teamTitle">Meet Our Team </h1>
         <div className="mainBox" >
-        <Card style={{ width: '18rem' }} className="subCont" >
+        <Card style={{ width: '30rem' }} className="subCont" >
   <Card.Img variant="top" className="imgs" src={image1} />
   <Card.Body>
     <Card.Title>Abdallah Alabed </Card.Title>
@@ -42,7 +30,7 @@ export class AboutUs extends Component {
     </Card.Text>
   </Card.Body>
 </Card>
-<Card style={{ width: '18rem'}}className="subCont">
+<Card style={{ width: '30rem'}}className="subCont">
   <Card.Img variant="top" className="imgs" src={image2} />
   <Card.Body>
     <Card.Title>dina abuzenah </Card.Title>
@@ -51,7 +39,7 @@ export class AboutUs extends Component {
     </Card.Text>
   </Card.Body>
 </Card>
-<Card style={{ width: '18rem' }}className="subCont">
+<Card style={{ width: '30rem' }}className="subCont">
   <Card.Img variant="top" className="imgs" src={image3} />
   <Card.Body>
     <Card.Title>Ehab Al-shrida</Card.Title>
@@ -60,7 +48,7 @@ export class AboutUs extends Component {
     </Card.Text>
   </Card.Body>
 </Card>
-<Card style={{ width: '18rem' }}className="subCont">
+<Card style={{ width: '30rem' }}className="subCont">
   <Card.Img variant="top" className="imgs" src={image4} />
   <Card.Body>
     <Card.Title>Mohammad Alwrekat </Card.Title>
@@ -69,7 +57,7 @@ export class AboutUs extends Component {
     </Card.Text>
   </Card.Body>
 </Card>
-<Card style={{ width: '18rem' }}className="subCont">
+<Card style={{ width: '30rem' }}className="subCont">
   <Card.Img variant="top" className="imgs" src={image5} />
   <Card.Body>
     <Card.Title>Rand Albqour</Card.Title>
@@ -85,15 +73,9 @@ export class AboutUs extends Component {
               the card's content.</Card.Title>
           </Card.Body>
         </Card>
-        <h1>Join Us </h1>
-        <div className="bottom">
-          <Button variant="outline-secondary" className="but1 buto">Yalla Bike !</Button>{' '}
-          <Button variant="outline-secondary" className="buto">Yalla Rent! </Button>{' '}
-        </div>
       </div>
     )
   }
-
   // onClick={()=>{history.push("BR")}}
 }
 export default AboutUs

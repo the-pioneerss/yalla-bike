@@ -3,6 +3,7 @@ import { Offcanvas, Button, Image, Col, Row, Container, Navbar, Nav } from 'reac
 import { withAuth0 } from '@auth0/auth0-react';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogOutButton';
+import { Link } from 'react-router-dom';
 export class Header extends Component {
   constructor(props) {
     super(props);
@@ -10,22 +11,23 @@ export class Header extends Component {
   }
   handleShow = () => { this.setState({ setShow: true }) }
   handleClose = () => { this.setState({ setShow: false }) }
+  /*
+bg='dark' variant='dark'
+  */
   render() {
     return (
       <>
-        <Navbar collapseOnSelect expand="true" bg='dark' variant='dark' id="responsive-navbar-nav">
+      <div class='navbarr'>
+        <Navbar collapseOnSelect expand="true"  id="responsive-navbar-nav">
           <Container>
-          <Navbar.Brand href="#home" id="responsive-navbar-nav">
+          <Navbar.Brand href="#home" id="responsive-navbar-nav">                    <Navbar.Toggle onClick={this.handleShow} aria-controls="responsive-navbar-nav"/>
           <img
                     alt=""
                     src="https://cdn-icons-png.flaticon.com/512/706/706170.png"
                     width="27"
                     height="27"/>{' '}
                     {' '}Yalla Bike{' '}
-                    <Navbar.Toggle onClick={this.handleShow} aria-controls="responsive-navbar-nav"/>
-
-            </Navbar.Brand>
-                                   
+            </Navbar.Brand>                                   
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav placement={'bottom'} className="me-auto">
                 <Nav.Link href="#pricing" id='hov'>
@@ -35,17 +37,12 @@ export class Header extends Component {
                         <Offcanvas.Title id='fontoff'>Yalla Bike</Offcanvas.Title>
                       </Offcanvas.Header>
                       <Offcanvas.Body>
-                        <Button id='navsbu' variant="#E05D5D">
-                          Events
-                        </Button>
-                        <br></br>
-                        <Button id='navsbu' variant="#E05D5D">
-                          Yalla Rent
-                        </Button>
-                        <br></br>
-                        <Button id='navsbu' variant="#E05D5D">
-                          About Us
-                        </Button>
+                      <Nav.Link id='rou' tag={Link} to="/home" href="/home">Home</Nav.Link>
+
+                        <Nav.Link id='rou' tag={Link} to="/event" href="/event">Events</Nav.Link>
+                        
+                        <Nav.Link id='rou' tag={Link} to="/rent" href="/rent">Yalla Rent</Nav.Link>
+                        <Nav.Link id='rou' tag={Link} to="/aboutus" href="/aboutus">About Us</Nav.Link>
                         {this.props.auth0.isAuthenticated ? <>
                           <br></br>
                           <Container>
@@ -63,8 +60,7 @@ export class Header extends Component {
                           <div id='userInfo'>
                             <h5><b>{this.props.name}</b></h5>
                             <a id='userMail' href={this.props.myEmail}><b><i>{this.props.myEmail}</i></b></a>
-                            <p>{this.props.tokenz} 💰<b>Tokenz</b></p>
-                            <br></br>
+                            <br></br><br></br>
                             <LogoutButton />
                           </div></>
                           : <></>
@@ -79,6 +75,7 @@ export class Header extends Component {
             </Navbar.Collapse>
           </Container>
         </Navbar>
+        </div>
       </>
     )
   }
@@ -104,4 +101,7 @@ export default withAuth0(Header);
                     height="27"
                   />
           </Navbar.Toggle>  
-*/
+                        <Button id='navsbu' variant="#E05D5D">
+                          Yalla Rent
+                        </Button>
+          */

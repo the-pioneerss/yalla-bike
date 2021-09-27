@@ -21,7 +21,14 @@ color : #F0E5CF ;
   background-color: #4B6587 ;
 }
 #nnee{
-  margin: 50px ;
+  margin : auto ;
+}
+#lastPMain{
+
+  width:70% ;
+  text-align : center ;
+  margin : auto ;
+  margin-top: 5% ;
 }
 .navbarFooter{
   background-color: #4B6587 ;  
@@ -107,9 +114,9 @@ color : #F0E5CF ;
 .container:hover .overlay {
   opacity: 1;
 }
-
 .newSection{
-background-color: #a1b4ce;
+/* background-color: #a1b4ce; */
+background-color: #E4FBFF;
 }
 #roow{
  margin : 55px ;
@@ -124,12 +131,12 @@ background-color: #a1b4ce;
 }
 .font{
   font-family : 'Courgette' , cursive ;
-  color : #EEEEEE ;
+  color : black ;
   font-size: 12px ;
 }
 #font{
   font-family : 'Courgette' , cursive ;
-  color : #F0E5CF ;
+  color : #ccc7bd ;
 }
 #fontoff{
   font-family : 'Courgette' , cursive ;
@@ -153,4 +160,34 @@ background-color: #a1b4ce;
 }
 #userInfo{
   text-align : center ;
+}
+.navbarr{
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjpWzsZsLsJZ6Y2jIjh-0gtMT55C6FgZpQKA&usqp=CAU');
+  /*background-repeat: no-repeat;*/
+  /* background-color: #FF9144; */
+  background-size: cover;
+}
+.whyUss{
+  background-color: #EDEEF7;
+}
+.whyUssImg{
+  background-color: #EDEEF7;
+  margin : auto ;
+}
+#buttonNews{
+  background-color: #CE1CC8;
+  color : white ;
+}
+#logOutButton{
+  background-color: #E2466E ;
+  color : white ;
+}
+#footerLogo{
+  color : white ;
+}
+#rou{
+  color : black ;
+}
+#rou:hover{
+background-color: rgb(147, 69, 219,0.5);
 }
