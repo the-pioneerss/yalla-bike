@@ -5,7 +5,7 @@ export class Footer extends Component {
   render() {
     return (
       <>
-        <Navbar bg={this.props.colorThems} variant={this.props.fontColor}>
+        <Navbar bg='dark' variant='dark' id="responsive-navbar-nav">
           <Container>
             <Navbar.Brand id='fontoff' href="#home">
               <img

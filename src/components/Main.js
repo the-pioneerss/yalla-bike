@@ -82,7 +82,7 @@ export class Main extends Component {
                     <Card className="card-lift--hover shadow border-0">
                       <Button
                         className="mt-4"
-                        variant="warning"
+                        variant="light"
                         href="https://our-passion.github.io/library/index"
                         target="_blank"
                       >
@@ -106,7 +106,7 @@ export class Main extends Component {
                     <Card className="card-lift--hover shadow border-0">
                       <Button
                         className="mt-4"
-                        variant="success"
+                        variant="light"
                         href="https://our-passion.github.io/library/index"
                         target="_blank"
                       >

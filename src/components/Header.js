@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Offcanvas, NavDropdown, Button, Image, Col, Row, Container, Navbar, Nav } from 'react-bootstrap';
+import { Offcanvas, Button, Image, Col, Row, Container, Navbar, Nav } from 'react-bootstrap';
 import { withAuth0 } from '@auth0/auth0-react';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogOutButton';
@@ -10,32 +10,22 @@ export class Header extends Component {
   }
   handleShow = () => { this.setState({ setShow: true }) }
   handleClose = () => { this.setState({ setShow: false }) }
-
   render() {
     return (
       <>
-        <Navbar collapseOnSelect expand="true" bg={this.props.colorThems} variant={this.props.fontColor}>
+        <Navbar collapseOnSelect expand="true" bg='dark' variant='dark' id="responsive-navbar-nav">
           <Container>
-            <Navbar.Toggle onClick={this.handleShow} aria-controls="responsive-navbar-nav" />
-            <Navbar.Brand href="#home" id='fontoff'>
-              <img
-                alt=""
-                src="https://cdn-icons-png.flaticon.com/512/706/706170.png"
-                width="27"
-                height="27"
-                className="d-inline-block align"
-              />{' '}
-              Yalla Bike {' '}
-              <NavDropdown className="d-inline-block align" title={<img src='https://cdn-icons-png.flaticon.com/512/5721/5721101.png' width='35' height='30' />
-              } id="navbarScrollingDropdown">
-                <NavDropdown.Item style={{ height: 50 }} href="#action3" onClick={this.props.handleGreen} id='GREEN'> </NavDropdown.Item>
-                <NavDropdown.Item href="#action3" style={{ height: 50 }} onClick={this.props.handleRed} id='RED'> </NavDropdown.Item>
-                <NavDropdown.Item href="#action3" style={{ height: 50 }} onClick={this.props.handleYellow} id='YELLOW'> </NavDropdown.Item>
-                <NavDropdown.Item href="#action3" style={{ height: 50 }} onClick={this.props.handleDark} id='DARK'> </NavDropdown.Item>
-                <NavDropdown.Item href="#action3" style={{ height: 50 }} onClick={this.props.handleLight} id='LIGHT'> </NavDropdown.Item>
-                <NavDropdown.Item href="#action3" style={{ height: 50 }} onClick={this.props.handleBlue} id='BLUE'> </NavDropdown.Item>
-              </NavDropdown>
+          <Navbar.Brand href="#home" id="responsive-navbar-nav">
+          <img
+                    alt=""
+                    src="https://cdn-icons-png.flaticon.com/512/706/706170.png"
+                    width="27"
+                    height="27"/>{' '}
+                    {' '}Yalla Bike{' '}
+                    <Navbar.Toggle onClick={this.handleShow} aria-controls="responsive-navbar-nav"/>
+
             </Navbar.Brand>
+                                   
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav placement={'bottom'} className="me-auto">
                 <Nav.Link href="#pricing" id='hov'>
@@ -51,6 +41,10 @@ export class Header extends Component {
                         <br></br>
                         <Button id='navsbu' variant="#E05D5D">
                           Yalla Rent
+                        </Button>
+                        <br></br>
+                        <Button id='navsbu' variant="#E05D5D">
+                          About Us
                         </Button>
                         {this.props.auth0.isAuthenticated ? <>
                           <br></br>
@@ -90,3 +84,24 @@ export class Header extends Component {
   }
 }
 export default withAuth0(Header);
+/*
+              <NavDropdown className="d-inline-block align" title={<img src='https://cdn-icons-png.flaticon.com/512/5721/5721101.png' width='35' height='30' />
+              } id="navbarScrollingDropdown">
+                <NavDropdown.Item style={{ height: 50 }} href="#action3" onClick={this.props.handleGreen} id='GREEN'> </NavDropdown.Item>
+                <NavDropdown.Item href="#action3" style={{ height: 50 }} onClick={this.props.handleRed} id='RED'> </NavDropdown.Item>
+                <NavDropdown.Item href="#action3" style={{ height: 50 }} onClick={this.props.handleYellow} id='YELLOW'> </NavDropdown.Item>
+                <NavDropdown.Item href="#action3" style={{ height: 50 }} onClick={this.props.handleDark} id='DARK'> </NavDropdown.Item>
+                <NavDropdown.Item href="#action3" style={{ height: 50 }} onClick={this.props.handleLight} id='LIGHT'> </NavDropdown.Item>
+                <NavDropdown.Item href="#action3" style={{ height: 50 }} onClick={this.props.handleBlue} id='BLUE'> </NavDropdown.Item>
+              </NavDropdown>
+                          <Navbar.Brand href="#home" id='fontoff'>
+            </Navbar.Brand>
+             <Navbar.Toggle onClick={this.handleShow} aria-controls="responsive-navbar-nav"> 
+                    <img
+                    alt=""
+                    src="https://cdn-icons-png.flaticon.com/512/706/706170.png"
+                    width="27"
+                    height="27"
+                  />
+          </Navbar.Toggle>  
+*/
