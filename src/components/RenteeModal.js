@@ -11,35 +11,38 @@ class RenteeModal extends Component {
         >
           <Modal.Header>
             <Modal.Title>
-              {this.props.data.username} Please Fill the Data Below To List your Bike
-              for Renting
+              {this.props.data.username} Please Fill the Data Below To List your
+              Bike for Renting
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form onSubmit={this.props.addBike}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Location</Form.Label>
-                <Form.Select aria-label="Default select example" onChange={this.props.handleLocation}>
+                <Form.Select
+                  aria-label="Default select example"
+                  onChange={this.props.handleLocation}
+                >
                   <option>Choose Your Location</option>
-                  <option value="Paris">Paris</option>
-                  <option value="Moscow">Moscow</option>
-                  <option value="Madrid">Madrid</option>
-                  <option value="Rome">Rome</option>
+                  <option value="Irbid"> Irbid </option>
+                  <option value="Zarqa"> Zarqa </option>
+                  <option value="Amman"> Amman </option>
+                  <option value="Aqaba"> Aqaba </option>
                 </Form.Select>
-                </Form.Group>
-                
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Gender Icon</Form.Label>
                 <Form.Select onChange={this.props.handleGender}>
                   <option>Choose Your Gender</option>
-                  <option value="0">Male</option>
-                  <option value="1">Female</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
                 </Form.Select>
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Your Phone Number </Form.Label>
-                <Form.Control
+                <Form.Control onChange={this.props.handlePhone}
                   type="number"
                   placeholder="Please Enter Your Phone Number"
                 />
@@ -51,10 +54,7 @@ class RenteeModal extends Component {
             </Form>
           </Modal.Body>
           <Modal.Footer>
-            <Button
-              variant="danger"
-              onClick={this.props.handleCloseModalNew}
-            >
+            <Button variant="danger" onClick={this.props.handleCloseModalNew}>
               Close
             </Button>
           </Modal.Footer>
