@@ -1,183 +1,91 @@
 
+body{
+  width: 100%;
+}
 .mainContainer{
-  margin: 20px;
-  width: 1000px;
+  margin: 10px;
+  width: 80%;
+margin-left: 5%;
+  
+}
+.card1{
+  text-align: center;
+  display: flex;
+  justify-items:  center;
+  display: flex;
+  justify-content: center;
+  height: 300px;
+background-image: url('https://besthqwallpapers.com/Uploads/30-10-2017/26207/thumb2-bicycle-geometric-figures-art-geometry-creative.jpg');
+/* background-image: url('https://www.studyinternational.com/wp-content/uploads/2018/05/tim-mossholder-160547-unsplash-2.jpg'); */
+background-size: cover;
+background-position: right;
+margin-left: 5%;
+}
+.card2{
+  text-align: center;
+  display: flex;
+  justify-items:  center;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+background-color: lemonchiffon;
+margin-left: 5%;
 }
 h1 {
-  background: #333;
-  color: #fff;
+  background: white;
+  color: rgb(247, 108, 108);;
   text-align: center;
-  margin: 0 0 5% 0;
+ margin-top: 10px;
   padding: 0.5em;
-  margin: 0 0 5% 0;
 }
 
-.cardBox {
-  float: left;
-  font-size: 1.2em;
-  margin: 1% 0 0 1%;
-  perspective: 800px;
-  transition: all 0.3s ease 0s;
-  width: 23.7%;
-}
 
-.cardBox:hover .card {
-  transform: rotateY( 180deg);
-}
-.abd{
-  background-image: url('./1.jpeg');
-  background-size: cover;
-  background-position: center;
-}
-.dina{
-  background-image: url('./2.jpeg');
-  background-size: cover;
-  background-position: center;
-}
-.ehab{
-  background-image: url('./3.jpeg');
-  background-size: cover;
-  background-position: center;
-}
-.moh{
-  background-image: url('./4.jpeg');
-  background-size: cover;
-  background-position: center;
-}
-.rand{
-  background-image: url('./5.jpg');
-  background-size: cover;
-  background-position: center;
-}
-.card {
-
-  cursor: default;
-  height: 300px;
-  transform-style: preserve-3d;
-  transition: transform 0.4s ease 0s;
-  width: 100%;
-  -webkit-animation: giro 1s 1;
-  animation: giro 1s 1;
-}
-
-.card p {
-  margin-bottom: 1.8em;
-}
-
-.card .front,
-.card .back {
-  backface-visibility: hidden;
-  box-sizing: border-box;
-  color: rgb(17, 1, 1);
-  display: block;
-  font-size: 1.2em;
-  height: 100%;
-  padding: 0.8em;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-}
-
-.card .front strong {
-  background: #fff;
-  border-radius: 100%;
-  color: #222;
-  font-size: 1.5em;
-  line-height: 30px;
-  padding: 0 7px 4px 6px;
-}
-
-.card .back {
-  transform: rotateY( 180deg);
-}
-
-.card .back a {
-  padding: 0.3em 0.5em;
-  background: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 1px;
-  font-size: 0.9em;
-  transition: all 0.2s ease 0s;
-}
-
-.card .back a:hover {
-  background: #fff;
-  color: #333;
-  text-shadow: 0 0 1px #333;
-}
-
-.cardBox:nth-child(1) .card .back {
-  background: cornflowerblue;
-}
-
-.cardBox:nth-child(2) .card .back {
-  background: orange;
-}
-
-.cardBox:nth-child(3) .card .back {
-  background: yellowgreen;
-}
-
-.cardBox:nth-child(4) .card .back {
-  background: tomato;
-}
-
-.cardBox:nth-child(2) .card {
-  -webkit-animation: giro 1.5s 1;
-  animation: giro 1.5s 1;
-}
-
-.cardBox:nth-child(3) .card {
-  -webkit-animation: giro 2s 1;
-  animation: giro 2s 1;
-}
-
-.cardBox:nth-child(4) .card {
-  -webkit-animation: giro 2.5s 1;
-  animation: giro 2.5s 1;
-}
-
-@-webkit-keyframes giro {
-  from {
-    transform: rotateY( 180deg);
-  }
-  to {
-    transform: rotateY( 0deg);
-  }
-}
-
-@keyframes giro {
-  from {
-    transform: rotateY( 180deg);
-  }
-  to {
-    transform: rotateY( 0deg);
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .cardBox {
-    margin-left: 2.8%;
-    margin-top: 3%;
-    width: 46%;
-  }
-  .card {
-    height: 285px;
-  }
-  .cardBox:last-child {
-    margin-bottom: 3%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .cardBox {
-    width: 94.5%;
-  }
-  .card {
-    height: 260px;
-  }
-}
 .sec{
-  margin-top: 20px;
+width: 300px;
+margin-top: 30px;
+}
+.text1{
+  display: flex;
+  justify-items: center;
+  width: 800px;
+  font-size: 20px;
+ 
+}
+.sec2{
+  width: 90%;
+margin: 20px;
+margin-top: 40px;
+text-align: center;
+display: flex;
+justify-content: center;
+  }
+  .bottom{
+    display: flex;
+    justify-content: center;
+  }
+  .but1{
+
+   margin-right: 20px;
+  }
+  .buto{font-weight: bolder;
+  width: 200px;
+  height: 70px;
+  margin-bottom: 30px;
+  }
+.mainBox{ align-content: center;
+margin-left: 5%;
+   width: 100%;
+  display: flex;
+  float: left;
+  margin-bottom: 5%;
+ 
+}
+.imgs{
+  height: 200px;
+}
+.subCont{ 
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(202, 88, 88);
+  color: white;
 }

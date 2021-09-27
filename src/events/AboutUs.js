@@ -3,131 +3,97 @@ import { useHistory } from 'react-router';
 import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel, Button, Modal, Form, Card } from 'react-bootstrap';
+import image1 from '../events/1.jpeg';
+import image2 from '../events/2.jpeg';
+import image3 from '../events/3.jpeg';
+import image4 from '../events/4.jpeg';
+import image5 from '../events/5.jpg';
 
 // function yalla() {
-     
+
 //  let history = useHistory();
 // }
 
 export class AboutUs extends Component {
   constructor(props) {
-     super(props);
-   
+    super(props);
+
     //  history = useHistory();
-    
+
 
   }
 
-render() {
-  return (
-    <div className="mainContainer">
-      <h1>Meet Our Team </h1>
-
-      <div class="boxesContainer">
-
-        <div class="cardBox">
-          <div class="card ">
-            <div class="front abd">
-              <h3>Abdallah Alabed </h3>
-              <p>Hover to flip</p>
-              {/* <strong>&#x21bb;</strong> */}
-            </div>
-            <div class="back">
-              <h3>Back Side One</h3>
-              <p>Content in card one</p>
-            </div>
-          </div>
-        </div>
-        <div class="cardBox">
-          <div class="card dina">
-            <div class="front">
-              <h3>Dina Abuzenah</h3>
-              <p>Hover to flip</p>
-
-            </div>
-            <div class="back">
-              <h3>Back Side Two</h3>
-              <p>Content in card two</p>
-            </div>
-          </div>
-        </div>
-        <div class="cardBox">
-          <div class="card ">
-            <div class="front ehab">
-              <h3>Ehab Al-shrida </h3>
-              <p>Hover to flip</p>
-
-            </div>
-            <div class="back">
-              <h3>Back Side Three</h3>
-              <p>Content in card three</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="cardBox">
-          <div class="card moh">
-            <div class="front moh">
-              <h3>Mohammad Alwrekat</h3>
-              <p>Hover to flip</p>
-
-            </div>
-            <div class="back">
-              <h3>Back Side Four</h3>
-              <p>Content in card four</p>
-            </div>
-          </div>
-        </div>
-        <div class="cardBox">
-          <div class="card rand">
-            <div class="front rand">
-              <h3>Rand Albqour</h3>
-              <p>Hover to flip</p>
-
-            </div>
-            <div class="back">
-              <h3>Back Side One</h3>
-              <p>Content in card one</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br />
-      <div className="sec">{' '}
-        <Card style={{ width: '18rem' }}>
+  render() {
+    return (
+      <div className="mainContainer">
+        <Card style={{ width: '100%' }} className="card1">
           <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
-            </Card.Text>
-            <Card.Link href="#">Card Link</Card.Link>
-            <Card.Link href="#">Another Link</Card.Link>
+            <Card.Title style={{ fontSize: '30px' }} className="sec" > Our Vision is to simplify and improve the lives of people. </Card.Title>
           </Card.Body>
         </Card>
-        <Card style={{ width: '18rem' }}>
+        <h1 className="title">Meet Our Team </h1>
+        <div className="mainBox" >
+        <Card style={{ width: '18rem' }} className="subCont" >
+  <Card.Img variant="top" className="imgs" src={image1} />
+  <Card.Body>
+    <Card.Title>Abdallah Alabed </Card.Title>
+    <Card.Text>
+    A Full-Stack Developer with background in  Engineering
+    </Card.Text>
+  </Card.Body>
+</Card>
+<Card style={{ width: '18rem'}}className="subCont">
+  <Card.Img variant="top" className="imgs" src={image2} />
+  <Card.Body>
+    <Card.Title>dina abuzenah </Card.Title>
+    <Card.Text>
+    A Full-Stack Developer with background in Civil Engineering.
+    </Card.Text>
+  </Card.Body>
+</Card>
+<Card style={{ width: '18rem' }}className="subCont">
+  <Card.Img variant="top" className="imgs" src={image3} />
+  <Card.Body>
+    <Card.Title>Ehab Al-shrida</Card.Title>
+    <Card.Text>
+    A Full-Stack Developer with background in Telecommunication Engineering.
+    </Card.Text>
+  </Card.Body>
+</Card>
+<Card style={{ width: '18rem' }}className="subCont">
+  <Card.Img variant="top" className="imgs" src={image4} />
+  <Card.Body>
+    <Card.Title>Mohammad Alwrekat </Card.Title>
+    <Card.Text>
+    A Full-Stack Developer .
+    </Card.Text>
+  </Card.Body>
+</Card>
+<Card style={{ width: '18rem' }}className="subCont">
+  <Card.Img variant="top" className="imgs" src={image5} />
+  <Card.Body>
+    <Card.Title>Rand Albqour</Card.Title>
+    <Card.Text>
+      A Full-Stack Developer with background in Civil Engineering.
+    </Card.Text>
+  </Card.Body>
+</Card>
+        </div>
+        <Card style={{ width: '100%' }} className="card2">
           <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
-            </Card.Text>
-            <Card.Link href="#">Card Link</Card.Link>
-            <Card.Link href="#">Another Link</Card.Link>
+            <Card.Title style={{ fontSize: '30px' }} className="sec2" >Our Mission Some quick example text to build on the card title and make up the bulk of
+              the card's content.</Card.Title>
           </Card.Body>
         </Card>
-
+        <h1>Join Us </h1>
+        <div className="bottom">
+          <Button variant="outline-secondary" className="but1 buto">Yalla Bike !</Button>{' '}
+          <Button variant="outline-secondary" className="buto">Yalla Rent! </Button>{' '}
+        </div>
       </div>
-      <h1>Join Us </h1>
-      <>
-        <Button variant="outline-secondary" onClick={()=>{history.push("BR")}}>Yalla Bike !</Button>{' '}
-        <Button variant="outline-secondary"onClick={()=>{history.push("BR")}}>Yalla Rent! </Button>{' '}
-      </>
-    </div>
-  )}
-  
+    )
+  }
 
+  // onClick={()=>{history.push("BR")}}
 }
 export default AboutUs
