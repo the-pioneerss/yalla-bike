@@ -1,21 +1,25 @@
-import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-// import Profile from "./components/Profile";
-import BR from "./components/BR";
+import React, { Component } from 'react';
 import axios from "axios";
+import './App.css';
 import RentModal from "./components/RentModal";
 import RenteeModal from "./components/RenteeModal";
-import { withAuth0 } from "@auth0/auth0-react";
-import Main from "./components/Main";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Map from "./components/Map";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { withAuth0 } from '@auth0/auth0-react';
 import WeatherModal from "./components/WeatherModal";
+import BR from "./components/BR";
+import Main from './components/Main';
+import Header from './components/Header';
+import Footer from './components/Footer' ;
+import Event2 from './events/Event2';
+import AboutUs from './events/AboutUs';
+
 
 export class App extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
+       setShow: false , 
       showToast: false,
       showToast2: false,
       data: [],
@@ -193,27 +197,17 @@ export class App extends Component {
 
  
   render() {
-    // console.log(this.state.showRental);
-    // console.log(this.state.showWeather);
-    // console.log(this.props.auth0);
 
     return (
       <>
-        {this.props.auth0.isAuthenticated ? (
-          <>
-            <Header
-              picture={this.props.auth0.user.picture}
-              name={this.props.auth0.user.name}
-              myEmail={this.props.auth0.user.email}
-              tokenz={this.state.tokenz}
-            />
-          </>
-        ) : (
-          <Header />
-        )}
-
-        {/* {<Map locationWeather={this.state.locationWeather} />} */}
-
+       {
+          this.props.auth0.isAuthenticated ?
+            <>
+              <Header picture={this.props.auth0.user.picture} name={this.props.auth0.user.name} myEmail={this.props.auth0.user.email} tokenz={this.state.tokenz} />
+            </>
+            : <Header />
+        }
+        <Main />     
         {this.props.auth0.isAuthenticated && (
           <BR
             data={this.state.data}
@@ -260,10 +254,15 @@ export class App extends Component {
             handlePhone={this.handlePhone}
           />
         )}
-     
+             
+       
+             <div>
+        {/* <Event2 /> */}
+        <AboutUs/>
+      </div>
         <Footer />
       </>
-    );
+     )
   }
 }
 export default withAuth0(App);

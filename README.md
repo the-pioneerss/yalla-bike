@@ -3,8 +3,6 @@ yalla bike is the first jordanian idea that aims to:
 1- aiming to help reduce the air pollution in jordan and possibly the whole world in the future by replacing using cars with using bicycles.
 2- helping people do more sports by cycling.
 
-## TEAM MEMBER
-
 Abdallah Alabed
 Dina abuzenah
 Mohammad alwrekat
