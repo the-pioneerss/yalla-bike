@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import { withAuth0 } from '@auth0/auth0-react';
 import Footer from './Footer';
-import { CardImg, Badge, Card, Button, Carousel, Container, Row, Col } from 'react-bootstrap';
+import { CardImg, Card, Button, Carousel, Container, Row, Col } from 'react-bootstrap';
 const NEWS = process.env.REACT_APP_BACKEND_URL;
 
 export class Main extends Component {
@@ -87,8 +87,8 @@ export class Main extends Component {
                       <Button
                         className="mt-4"
                         variant="light"
-                        tag={Link} 
-                        to="/rent" 
+                        tag={Link}
+                        to="/rent"
                         href="/rent"
                       >
                         <Card.Body className="py-4">
@@ -112,11 +112,10 @@ export class Main extends Component {
                       <Button
                         className="mt-4"
                         variant="light"
-                        tag={Link} 
-                        to="/event" 
+                        tag={Link}
+                        to="/event"
                         href="/event"
-                          >
-                        
+                      >
                         <Card.Body className="py-4">
                           <CardImg variant='top' src='https://visitelizabethcity.com//images/event_photos/Tarwheel2019_riverfront.jpg' height='160' />
                           <br></br><br></br>
@@ -171,7 +170,7 @@ export class Main extends Component {
               </Col>
             </Row>
           </Container>
-       <br/><br/> </section>
+          <br /><br /> </section>
         <section class='newSection'>
           <br></br><br></br>
           <h1 id='fontoff' className="text-center">Why We Are Doing This ?!</h1>
@@ -192,7 +191,7 @@ export class Main extends Component {
                             id='buttonNews'
                             href={item.sourseUrl}
                             target="_blank"
-                          >Show Full Article 
+                          >Show Full Article
                           </Button>
                         </Card.Body>
                       </Card>
@@ -200,10 +199,9 @@ export class Main extends Component {
                   </>
                 })
               }
-              <br/>
-    <h4 id='lastPMain' className="text-center">With The Increase In The Earths' Temperature And The Deadly Results We See In The News On Daily Basis From The Pollution We As A Youth Have To Step Up And Help The Planet We Live On So We All Can Survive!<br/>Join Our Community And Help Us Save Planet Earth!
-    </h4>
-
+              <br />
+              <h4 id='lastPMain' className="text-center">With The Increase In The Earths' Temperature And The Deadly Results We See In The News On Daily Basis From The Pollution We As A Youth Have To Step Up And Help The Planet We Live On So We All Can Survive!<br />Join Our Community And Help Us Save Planet Earth!
+              </h4>
             </div></section><br></br><br></br></section>
         <Footer />
       </>
@@ -211,34 +209,3 @@ export class Main extends Component {
   }
 }
 export default withAuth0(Main);
-/*
-                        <div>
-                          <Badge color="success" pill className="mr-1">
-                            Family
-                          </Badge>
-                          <Badge color="success" pill className="mr-1">
-                            Enjoy
-                          </Badge>
-                          <Badge color="success" pill className="mr-1">
-                            Groups
-                          </Badge>
-                        </div>
-                         <blockquote className="card-blockquote">
-          <svg
-            className="svg-bg success"
-            preserveAspectRatio="none"
-            viewBox="0 0 583 95"
-          >
-            <polygon
-              className="fill-default "
-            />
-            <polygon
-              variant='danger'
-              color='yellow'
-              className="bg-success"
-              opacity=".2"
-              points="0,42 583,95 683,0 0,95"
-            />
-          </svg>
-        </blockquote>
-*/
