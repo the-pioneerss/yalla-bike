@@ -48,7 +48,7 @@ console.log("Cancelled!");
       <div className="container1" >
         <div className="container2">
           <Card className="bg-dark text-white">
-            <Card.Img className="image" />
+            <Card.Img className="image " />
             <Card.ImgOverlay className="cardOverlay">
               <Card.Text className="textCard">
                 IT'S TIME TO GET THE BIKES OUT AND START PEDALLING! SO MUCH FUN IS WAITING FOR YOU ON EVENTS!
@@ -58,7 +58,11 @@ console.log("Cancelled!");
 
         </div>
         <div className="mainButton">
+
+        <Button className="btn-cs scaleOut uu" onClick={() => { this.handleModal() }}>
+
         <Button className="btn-cs scaleOut uu" variant='#E2466E' onClick={() => { this.handleModal() }}>
+
           Create An Event
         </Button>
         </div>
@@ -113,6 +117,18 @@ console.log("Cancelled!");
             <Card.Text>
               A long-distance journey on the road. Typically, road trips are long distances traveled by automobile..
               <br /> <strong>Location: </strong>  Alsalt ,Jordan.
+
+              <br /> <strong>Time: </strong> 12:00pm-2:00pm ,Saturday September 25, 2021
+            </Card.Text>
+            {this.state.buttonEnabled2 &&
+            <Button className="cardBut " onClick={this.onClick3} >Join!</Button>}
+            {!this.state.buttonEnabled2&& 
+            <Button className="cardBut "variant="success" onClick={this.onClick4}>Joined!</Button>}
+          </Card.Body>
+          </Card>
+          <Card className="card">
+          <Card.Header>Morning Road Trip</Card.Header>
+
               <br /> <strong>Time: </strong> 12:00pm ,Saturday September 25, 2021
             </Card.Text>
             {this.state.buttonEnabled2 &&
@@ -123,17 +139,26 @@ console.log("Cancelled!");
           </Card>
           <Card className="card" style={{ width: '50rem' }}>
           <Card.Header className='eve'>Morning Road Trip</Card.Header>
+
           <Card.Body>
             <Card.Title>Everyday morning trip</Card.Title>
             <Card.Text>
               With supporting text below as a natural lead-in to additional content.
               <br /> <strong>Location: </strong> Amman ,Jordan.
+              <br /> <strong>Time: </strong>  8:00am-10:00am ,Saturday Octoper 25, 2021
+            </Card.Text>
+            {this.state.buttonEnabled &&
+            <Button className="cardBut " onClick={this.onClick1} >Join!</Button>}
+            {!this.state.buttonEnabled&& 
+            <Button className="cardBut "variant="success" onClick={this.onClick2}>Joined!</Button>}
+
               <br /> <strong>Time: </strong>  8:00am ,Saturday Octoper 25, 2021
             </Card.Text>
             {this.state.buttonEnabled &&
             <Button className="cardBut " variant="warning" onClick={this.onClick1} >Join!</Button>}
             {!this.state.buttonEnabled&& 
             <Button className="cardBut "variant="warning" onClick={this.onClick2}>Joined!</Button>}
+
           </Card.Body>
         </Card>
       </div>
