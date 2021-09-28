@@ -131,12 +131,20 @@ background-color: #E4FBFF;
 }
 .font{
   font-family : 'Courgette' , cursive ;
-  color : black ;
+  color : white ;
   font-size: 12px ;
+  margin : auto ;
+}
+#fontlo{
+  font-family : 'Courgette' , cursive ;
+  color : white ;
+  font-size: 19px ;
+
 }
 #font{
   font-family : 'Courgette' , cursive ;
-  color : #ccc7bd ;
+  color : #f3f1ed ;
+  font-size: 12px ;
 }
 #fontoff{
   font-family : 'Courgette' , cursive ;
@@ -153,6 +161,15 @@ background-color: #E4FBFF;
   transform: translate(-50%, -50%);
   text-align: center;
   font-weight: bolder ;
+}
+#navFooter{
+  color : white ;
+  font-weight: bolder ;
+  font-size: 19px ;
+}
+#navFooter:hover{
+  background-color: #e4fbff56;
+  cursor:grab ;
 }
 #userMail{
   font-size: 12px ;
@@ -191,3 +208,40 @@ background-color: #E4FBFF;
 #rou:hover{
 background-color: rgb(147, 69, 219,0.5);
 }
+/*
+.btn-cs {
+  color: #ffffff;
+  background-image: url('https://wallpaperaccess.com/full/1732235.jpg');
+
+  /* background: #CE1CC8; */
+/*  font-family: "Trebuchet MS", sabs-serif;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 30px;
+  margin: 20px 20px 0px 10px;
+  border: 2px solid #E4FBFF;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px #E4FBFF;
+  transition: .6s ease;
+  width: 600px;
+  margin-top: 50px;
+height:70px;
+}
+.btn-cs:hover {
+  box-shadow: 0px 0px 0px #aaa;
+  color : white ;
+  background: #928ef5;
+}
+ .btn-cs.invert:hover {
+  color : white ;
+  background-color: #E2466E;
+  background: #E2466E;
+} 
+.btn-cs.scaleOut:hover {
+  transform: scale(1.1);
+}
+
+.btn-cs.fade:hover {
+  opacity: 0.85;
+}
+*/

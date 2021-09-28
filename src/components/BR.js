@@ -1,13 +1,9 @@
-import { height } from "dom-helpers";
 import React, { Component } from "react";
 import {
   Col,
   Row,
   Button,
-  Modal,
-  Card,
-  DropdownButton,
-  Dropdown,
+  Card
 } from "react-bootstrap";
 import "./Profile.css";
 import axios from "axios";
@@ -15,7 +11,7 @@ const NEWS = process.env.REACT_APP_BACKEND_URL;
 
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, "0");
-let mm = String(today.getMonth() + 1).padStart(2, "0"); 
+let mm = String(today.getMonth() + 1).padStart(2, "0");
 let yyyy = today.getFullYear();
 today = mm + "/" + dd + "/" + yyyy;
 
@@ -118,11 +114,11 @@ class BR extends Component {
                           </header>
                           <div className="details">
                             <h3 className="date">{today}</h3>
-                            <h1 className="title">
+                            <h5 className="title">
                               {" "}
                               {element.username.toUpperCase()} <br />{" "}
-                              <span> is renting </span>{" "}
-                            </h1>
+                            </h5>
+                            <span> is renting </span>{" "}
                             <h2 className="venue">
                               Phone Number: {element.Phone}
                             </h2>
@@ -148,7 +144,7 @@ class BR extends Component {
             </Row>
             <h2 className="lists"> All Rentals In Jordan:</h2>
           </div>
-{console.log('DATAA : ',this.props.data)}
+          {console.log('DATAA : ', this.props.data)}
 
           {this.props.data.map((e) => {
             return (
@@ -161,37 +157,34 @@ class BR extends Component {
                       </header>
                       <div className="details">
                         <h3 className="date">{today}</h3>
-                        <h1 className="title">
+                        <h5 className="title">
                           {" "}
                           {e.username.toUpperCase()} <br />{" "}
-                          <span> is renting </span>{" "}
-                        </h1>
+                        </h5>
+                        <span> is renting </span>{" "}
                         <h2 className="venue">Phone Number: {e.Phone}</h2>
                         <h2 className="venue">Location: {e.location}</h2>
                         <h4 className="price">1.5$/Hr</h4>
                       </div>
                       <footer>
-                        {/* 0000000000000000000000000000 */}
 
-{ this.props.name === e.username ?
-                      <Button
-                      onClick={() => this.props.deleteBike(e._id)}
-                          className="yalla"
-                          variant='danger'
-                        >
-                          Delete
-                        </Button>
-                        :
+                        {this.props.name === e.username ?
+                          <Button
+                            onClick={() => this.props.deleteBike(e._id)}
+                            className="yalla"
+                            variant='danger'
+                          >
+                            Delete
+                          </Button>
+                          :
 
-                        <Button
-                          onClick={this.props.handleShowModalRental}
-                          className="yalla"
-                        >
-                          Yalla Bike!
-                        </Button>
-}   
-                        {/*  0000000000000000000000000000*/}
-
+                          <Button
+                            onClick={this.props.handleShowModalRental}
+                            className="yalla"
+                          >
+                            Yalla Bike!
+                          </Button>
+                        }
                       </footer>
                     </article>
                   </section>
@@ -200,6 +193,7 @@ class BR extends Component {
             );
           })}
         </Row>
+        <br></br><br></br><br></br>
       </>
     );
   }
