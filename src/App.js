@@ -10,8 +10,8 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <Event2 />
-        {/* <AboutUs/> */}
+        {/* <Event2 /> */}
+        <AboutUs/>
       </div>
     )
   }

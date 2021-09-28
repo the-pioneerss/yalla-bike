@@ -49,7 +49,7 @@ console.log("Cancelled!");
 
         <div className="container2">
           <Card className="bg-dark text-white">
-            <Card.Img className="image" />
+            <Card.Img className="image " />
             <Card.ImgOverlay className="cardOverlay">
               <Card.Text className="textCard">
                 IT'S TIME TO GET THE BIKES OUT AND START PEDALLING! SO MUCH FUN IS WAITING FOR YOU ON EVENTS!

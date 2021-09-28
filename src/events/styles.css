@@ -8,7 +8,17 @@ body{
 margin-left: 5%;
   
 }
-.card1{
+.subcontainer2{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.card1{width: 100%;
+  margin: 30px;
+  display: grid;
+  float: left;
+}
+/* .card1{
   text-align: center;
   display: flex;
   justify-items:  center;
@@ -16,12 +26,16 @@ margin-left: 5%;
   justify-content: center;
   height: 300px;
 background-image: url('https://besthqwallpapers.com/Uploads/30-10-2017/26207/thumb2-bicycle-geometric-figures-art-geometry-creative.jpg');
-/* background-image: url('https://www.studyinternational.com/wp-content/uploads/2018/05/tim-mossholder-160547-unsplash-2.jpg'); */
 background-size: cover;
 background-position: right;
 margin-left: 5%;
-}
-.card2{
+} */
+/* .sec{
+  width: 300px;
+  margin-top: 30px;
+  }
+   */
+   .card2{
   text-align: center;
   display: flex;
   justify-items:  center;
@@ -40,10 +54,7 @@ h1 {
 }
 
 
-.sec{
-width: 300px;
-margin-top: 30px;
-}
+
 .text1{
   display: flex;
   justify-items: center;
@@ -89,3 +100,29 @@ margin-left: 5%;
   background-color: rgb(202, 88, 88);
   color: white;
 }
+
+/* .bg-text {
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.4); 
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+} */
+
+/* .bg-image {
+  background-image: url('https://besthqwallpapers.com/Uploads/30-10-2017/26207/thumb2-bicycle-geometric-figures-art-geometry-creative.jpg');
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
