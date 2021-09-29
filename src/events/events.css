@@ -29,7 +29,7 @@ opacity: 80%;
 .cardOverlay{
 width: 700px;
 font-family: 'Cardo', serif;
-  height: 200px;
+height: 200px;
   color: black;
   font-weight: bolder;
   font-size: 20px;
@@ -64,7 +64,7 @@ font-family: 'Cardo', serif;
 
   /* background: #CE1CC8; */
 
-  font-family: "Trebuchet MS", sabs-serif;
+  font-family: 'Cardo', serif;
 /* >>>>>>> development */ 
   font-size: 20px;
   font-weight: bold;

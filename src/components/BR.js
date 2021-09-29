@@ -54,7 +54,6 @@ class BR extends Component {
     });
     // console.log(this.state.filteredData);
   };
-
   render() {
     // console.log(this.state.dataBikes.networks[0].name);
     // console.log(this.state.filteredData)
@@ -73,9 +72,7 @@ class BR extends Component {
                 <div className="onHover">List Your Bike for Renting! </div>
               </button>
             </div>
-
             <h2 className="lists"> Renting List in Your Area:</h2>
-
             <select onChange={this.handleFilter} className="FilterMe">
               <option selected> Filter By City:</option>
               <option value="Irbid">Irbid</option>
@@ -131,13 +128,12 @@ class BR extends Component {
                           {this.props.name === element.username ?
                           <Button
                             onClick={() => this.props.deleteBike(element._id)}
-                            className="yalla"
+                            className="yallaDelete"
                             variant='danger'
                           >
                             Delete
                           </Button>
                           :
-
                           <Button
                             onClick={this.props.handleShowModalRental}
                             className="yalla"
@@ -182,7 +178,7 @@ class BR extends Component {
                         {this.props.name === e.username ?
                           <Button
                             onClick={() => this.props.deleteBike(e._id)}
-                            className="yalla"
+                            className="yallaDelete"
                             variant='danger'
                           >
                             Delete
@@ -209,5 +205,4 @@ class BR extends Component {
     );
   }
 }
-
 export default BR;

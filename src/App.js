@@ -379,7 +379,7 @@ export class App extends Component {
             ) : (
               <>
                 <Header />
-                <Alert variant="danger">Please LLog In First !</Alert> <Main />
+                 <Main />
               </>
             )}
           </Route>
@@ -420,7 +420,7 @@ export class App extends Component {
             ) : (
               <>
                 <Header />
-                <Alert variant="danger">Please Log In First !</Alert> <Main />
+                <Main />
               </>
             )}
           </Route>
@@ -450,3 +450,6 @@ export class App extends Component {
   }
 }
 export default withAuth0(App);
+/*
+<Alert variant="danger">Please LLog In First !</Alert>
+*/

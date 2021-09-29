@@ -4,8 +4,8 @@
 
 
   .buttonJS button { 
-  font-family: 'Quicksand', sans-serif;
-  position: relative;
+    font-family: 'Cardo', serif;
+    position: relative;
   width: 70%;
   height: 4rem;
   font-size: 1.25rem;
@@ -61,16 +61,16 @@
 .buttonJS h2{
   margin-bottom: 20px;
   font-weight: 500;
-  font-size: 70px;
-  font-family : 'Courgette' , cursive ;
+  font-size: 50px;
+  font-family: 'Cardo', serif;
   TEXT-ALIGN: center;
 }
 .lists {
   font-weight: 500;
-  font-size: 70px;
+  font-size: 50px;
   margin-top: 100px;
   margin-bottom: 70px;
-  font-family: "Italianno", cursive;
+  font-family: 'Cardo', serif;
   TEXT-ALIGN: center;
   justify-content: center;
   align-items: center;
@@ -163,6 +163,17 @@ margin-bottom: 20px;
   padding-bottom: 12px;
   background-color: #7037ca;
 }
+.yallaDelete{
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  padding-top: 12px; 
+  padding-bottom: 12px;
+}
+
 .price {
   background: white;
   opacity: 0.8;

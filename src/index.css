@@ -133,19 +133,19 @@ background-color: #E4FBFF;
   display:inline-block ;
 }
 .font{
-  font-family : 'Courgette' , cursive ;
+  font-family: 'Cardo', serif;
   color : white ;
   font-size: 12px ;
   margin : auto ;
 }
 #fontlo{
-  font-family : 'Courgette' , cursive ;
+  font-family: 'Cardo', serif;
   color : white ;
   font-size: 19px ;
 
 }
 #font{
-  font-family : 'Courgette' , cursive ;
+  font-family: 'Cardo', serif;
   color : #f3f1ed ;
   font-size: 12px ;
 }
