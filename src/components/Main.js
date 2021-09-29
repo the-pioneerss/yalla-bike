@@ -66,68 +66,57 @@ export class Main extends Component {
         <br></br>
         <section className="section section-lg pt-lg-0 mt--200">
           <Container>
-            <Row className="justify-content-center">
-              <Col lg="12">
-                <Row className="row-grid">
-                  <Col lg="1"></Col>
-                  <Col lg="4">
-                    <Card className="card-lift--hover shadow border-0">
-                      <Button
-                        className="mt-4"
-                        variant="light"
-                        tag={Link}
-                        to="/rent"
-                        href="/rent"
-                      >
-                        <Card.Body className="py-4">
-                          <CardImg
-                            variant="top"
-                            src="https://bikerentalmanager.com/wp-content/uploads/BikeApp_DM_DepositphotosSmall-900x450.png"
-                            height="160"
-                          />
-                          <br></br>
-                          <br></br>
-                          <h6 className="text-danger text-uppercase">
-                            Yalla Rent !
-                          </h6>
-                          <p className="description mt-3">
-                            Rent or Lease a Bike And Help The Community
-                          </p>
-                        </Card.Body>
-                      </Button>
-                    </Card>
-                  </Col>
-                  <Col lg="2"></Col>
-                  <Col lg="4">
-                    <Card className="card-lift--hover shadow border-0">
-                      <Button
-                        className="mt-4"
-                        variant="light"
-                        tag={Link}
-                        to="/event"
-                        href="/event"
-                      >
-                        <Card.Body className="py-4">
-                          <CardImg
-                            variant="top"
-                            src="https://visitelizabethcity.com//images/event_photos/Tarwheel2019_riverfront.jpg"
-                            height="160"
-                          />
-                          <br></br>
-                          <br></br>
-                          <h6 className="text-success text-uppercase">
-                            Yalla Events !
-                          </h6>
-                          <p className="description mt-3">
-                            Get Ready and Join The Fun With The Community
-                          </p>
-                        </Card.Body>
-                      </Button>
-                    </Card>
-                  </Col>
-                </Row>
-              </Col>
-            </Row>
+            <div className="YallaButtons">
+              <Card className="card-lift--hover shadow border-0">
+                <Button
+                  className="mt-4"
+                  variant="light"
+                  tag={Link}
+                  to="/rent"
+                  href="/rent"
+                >
+                  <Card.Body className="py-4">
+                    <CardImg
+                      variant="top"
+                      src="https://bikerentalmanager.com/wp-content/uploads/BikeApp_DM_DepositphotosSmall-900x450.png"
+                      height="160"
+                    />
+                    <br></br>
+                    <br></br>
+                    <h6 className="text-danger text-uppercase">Yalla Rent !</h6>
+                    <p className="description mt-3">
+                      Rent or Lease a Bike And Help The Community
+                    </p>
+                  </Card.Body>
+                </Button>
+              </Card>
+
+              <Card className="card-lift--hover shadow border-0">
+                <Button
+                  className="mt-4"
+                  variant="light"
+                  tag={Link}
+                  to="/event"
+                  href="/event"
+                >
+                  <Card.Body className="py-4">
+                    <CardImg
+                      variant="top"
+                      src="https://visitelizabethcity.com//images/event_photos/Tarwheel2019_riverfront.jpg"
+                      height="160"
+                    />
+                    <br></br>
+                    <br></br>
+                    <h6 className="text-success text-uppercase">
+                      Yalla Events !
+                    </h6>
+                    <p className="description mt-3">
+                      Get Ready and Join The Fun With The Community
+                    </p>
+                  </Card.Body>
+                </Button>
+              </Card>
+            </div>
           </Container>
         </section>
         <br></br>
@@ -139,18 +128,19 @@ export class Main extends Component {
             <br />
             <br />
             <Row className="row-grid align-items-center">
-            
+              <div className="WhyUspara">
                 <Card className="bg-default shadow border-0">
                   <CardImg
                     alt="..."
                     src="http://cdn.shopify.com/s/files/1/0218/5358/articles/why-bicycling-makes-us-happier-spokester-com_1024x1024.png?v=1523559240"
-                
                     style={{ height: 550 }}
                   />
                 </Card>
-              
+
                 <div className="pl-md-5">
-                  <h3 id="HeroParagTitle" className="text-center">Why US !?</h3>
+                  <h3 id="HeroParagTitle" className="text-center">
+                    Why Us !?
+                  </h3>
                   <h4 id="HeroParag">
                     We Are The First Jordanian Team To Create an App That Aims
                     Directly To Save the Environment By Replacing The
@@ -166,7 +156,7 @@ export class Main extends Component {
                     Started!
                   </h4>
                 </div>
-             
+              </div>
             </Row>
           </Container>
           <br />
