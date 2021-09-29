@@ -1,7 +1,7 @@
 
 
-body{ width: 100%;
-
+/* body{ width: 100%;
+ */
 /* body{ width: 100%;
 
   display: flex;
@@ -28,6 +28,7 @@ opacity: 80%;
 }
 .cardOverlay{
 width: 700px;
+font-family: 'Cardo', serif;
   height: 200px;
   color: black;
   font-weight: bolder;
@@ -40,13 +41,22 @@ width: 700px;
   width: 600px;
   text-align: center;
   margin: 8%;
+  font-family: 'Cardo', serif;
 }
 .mainButton{display: flex;
   justify-content: center;
 margin-bottom: 5%;
+font-family: 'Cardo', serif;
 }
 .btn-cs {
   color: #ffffff;
+/* <<<<<<< abdAboutme
+  font-family: 'Cardo', serif;
+  background-image: url('https://wallpaperaccess.com/full/1732235.jpg');
+
+  /* background: #CE1CC8; */
+  
+/* ======= */
 
   background: #1690D8;
 
@@ -55,6 +65,7 @@ margin-bottom: 5%;
   /* background: #CE1CC8; */
 
   font-family: "Trebuchet MS", sabs-serif;
+/* >>>>>>> development */ 
   font-size: 20px;
   font-weight: bold;
   padding: 10px 30px;
@@ -74,6 +85,8 @@ margin-bottom: 5%;
 height:70px;
 }
 .btn-cs:hover {
+  
+  font-family: 'Cardo', serif;
   box-shadow: 0px 0px 0px #aaa;
   color : white ;
   background: #928ef5;
@@ -84,11 +97,13 @@ height:70px;
   background: #E2466E;
 } */
 .btn-cs.scaleOut:hover {
+  font-family: 'Cardo', serif;
   transform: scale(1.1);
 }
 
 .btn-cs.fade:hover {
   opacity: 0.85;
+  font-family: 'Cardo', serif;
 }
 
 
@@ -101,9 +116,11 @@ margin-top: 40px;
 
 .cardBut{
   float: right;
+  font-family: 'Cardo', serif;
   margin-right: 20px;
 }
 .events{ width: 100%;
+  font-family: 'Cardo', serif;
   /* margin: 20px; */
 
 }
@@ -113,13 +130,16 @@ h3{
 }
 h3{
   text-align: center;
+  font-family: 'Cardo', serif;
 }
 /***************************************/
 .eve{
   background-image: url('https://wallpaperaccess.com/full/1732235.jpg');
+  font-family: 'Cardo', serif;
 }
 .card{
 margin : auto ;
 margin-bottom: 30px;
+font-family: 'Cardo', serif;
 
 }
