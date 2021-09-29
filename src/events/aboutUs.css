@@ -89,7 +89,7 @@
 .para1 {
   width: 650px;
   left: 80px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   font-family: 'Cardo', serif;
 }
 .page1_2 {
@@ -104,7 +104,7 @@
 .para2 {
   width: 650px;
   left: 80px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   font-family: 'Cardo', serif;
 }
 .h2Right {
