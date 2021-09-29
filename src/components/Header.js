@@ -14,7 +14,7 @@ export class Header extends Component {
   render() {
     return (
       <>
-        <div class='navbarr'>
+        <div className='navbarr'>
           <Navbar collapseOnSelect expand="true" id="responsive-navbar-nav">
             <Container>
               <Navbar.Brand href="#home" id="responsive-navbar-nav">

@@ -6,7 +6,7 @@ export class Footer extends Component {
   render() {
     return (
       <>
-        <div class='navbarr'>
+        <div className='navbarr'>
           <br></br>
           <Navbar id="responsive-navbar-nav">
             <Container>
@@ -27,10 +27,10 @@ export class Footer extends Component {
             </Container>
           </Navbar>
         </div>
-        <div class='navbarr'>
+        <div className='navbarr'>
           <br></br><br></br>
         </div>
-        <div class='navbarr'>
+        <div className='navbarr'>
           <Navbar id="responsive-navbar-nav">
             <Container>
               <Navbar.Brand target="_blank" href="https://github.com/the-pioneerss" id='font'>

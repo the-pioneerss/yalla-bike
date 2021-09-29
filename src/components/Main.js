@@ -134,7 +134,7 @@ export class Main extends Component {
         <br></br>
         <br></br>
         <br></br>
-        <section class="whyUssImg">
+        <section className="whyUssImg">
           <Container>
             <br />
             <br />
@@ -144,7 +144,7 @@ export class Main extends Component {
                   <CardImg
                     alt="..."
                     src="http://cdn.shopify.com/s/files/1/0218/5358/articles/why-bicycling-makes-us-happier-spokester-com_1024x1024.png?v=1523559240"
-                    top
+                
                     style={{ height: 550 }}
                   />
                 </Card>
@@ -173,7 +173,7 @@ export class Main extends Component {
           <br />
           <br />{" "}
         </section>
-        <section class="newSection">
+        <section className="newSection">
           <br></br>
           <br></br>
           <h1 id="fontoff" className="text-center">
@@ -181,7 +181,7 @@ export class Main extends Component {
           </h1>
           <br></br>
           <br></br>
-          <section class="section">
+          <section className="section">
             <div className="row">
               {this.state.news.map((item) => {
                 return (
