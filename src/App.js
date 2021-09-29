@@ -427,18 +427,18 @@ export class App extends Component {
           <Route path="/aboutus">
             {this.props.auth0.isAuthenticated ? (
               <>
-                <Header
+                {/* <Header
                   picture={this.props.auth0.user.picture}
                   name={this.props.auth0.user.name}
                   myEmail={this.props.auth0.user.email}
                   tokenz={this.state.tokenz}
-                />
+                /> */}
                 <AboutUs />
                 <Footer />
               </>
             ) : (
               <>
-                <Header />
+                {/* <Header /> */}
                 <AboutUs />
                 <Footer />
               </>
