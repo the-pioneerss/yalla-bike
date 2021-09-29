@@ -2,10 +2,8 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Modal, Form, Card } from "react-bootstrap";
 import Dialog from "react-bootstrap-dialog";
-// but first install npm i react-bootstrap-dialog --save
 import "./events.css";
 import axios from "axios";
-
 export class Event2 extends Component {
   constructor(props) {
     super(props);
@@ -14,35 +12,32 @@ export class Event2 extends Component {
       buttonEnabled: true,
       buttonEnabled2: true,
       eventsData: [],
-      Creator:this.props.name
-    };
+      Creator: this.props.name
+        };
   }
-
   handleModal = () => {
     this.setState({ show: !this.state.show });
   };
-
   onClick1 = () => {
     this.setState({ buttonEnabled: false });
     this.dialog.showAlert("joined! See you soon!");
-    console.log("joined!");
+    // console.log("joined!");
   };
   onClick2 = () => {
     this.setState({ buttonEnabled: true });
     this.dialog.showAlert("Oops! Cancelled!");
-    console.log("Cancelled!");
+    // console.log("Cancelled!");
   };
   onClick3 = () => {
     this.setState({ buttonEnabled2: false });
     this.dialog.showAlert("You Joined The Event, Can't Wait to See You !");
-    console.log("joined!");
+    // console.log("joined!");
   };
   onClick4 = () => {
     this.setState({ buttonEnabled2: true });
     this.dialog.showAlert("You Have Left The Event!");
-    console.log("Cancelled!");
+    // console.log("Cancelled!");
   };
-
   componentDidMount = async () => {
     const eventts = await axios.get(
       `https://${process.env.REACT_APP_BACKEND_URL}/events`
@@ -51,10 +46,8 @@ export class Event2 extends Component {
       eventsData: eventts.data,
     });
   };
-
   render() {
-    console.log(this.state.eventsData)
-
+    // console.log(this.state.eventsData)
     return (
       <div className="main">
         <div className="container1">
@@ -182,7 +175,6 @@ export class Event2 extends Component {
                       {e.time}
                       <br /> <strong>Created By: {this.props.name}</strong>
                     </Card.Text>
-
                     {e.userName === this.props.name ? (
                       <Button
                         onClick={() => this.props.deleteEvent(e._id)}
@@ -194,24 +186,13 @@ export class Event2 extends Component {
                     ) : (
                       <></>
                     )}
-                    {this.state.buttonEnabled2 && (
-                      <Button
-                        className="cardBut "
-                        variant="warning"
-                        onClick={this.onClick3}
-                      >
-                        Join!
-                      </Button>
-                    )}
-                    {!this.state.buttonEnabled2 && (
-                      <Button
-                        className="cardBut "
-                        variant="warning"
-                        onClick={this.onClick4}
-                      >
-                        Joined
-                      </Button>
-                    )}
+                    <Button
+                      className="cardBut "
+                      variant="warning"
+                      onClick={this.onClick3}
+                    >
+                      Join!
+                    </Button>
                   </Card.Body>
                 </Card>
               </>
@@ -229,9 +210,4 @@ export class Event2 extends Component {
     );
   }
 }
-
 export default Event2;
-
-{
-  /*  */
-}

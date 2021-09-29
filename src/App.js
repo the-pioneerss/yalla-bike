@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 import Event2 from "./events/Event2";
 import AboutUs from "./events/AboutUs";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Alert } from "react-bootstrap";
+// import { Alert } from "react-bootstrap";
 
 export class App extends Component {
   constructor(props) {
@@ -21,7 +21,6 @@ export class App extends Component {
       showToast: false,
       showToast2: false,
       data: [],
-      // dataBikes:[],
       showRental: false,
       username: "",
       location: "",
@@ -51,11 +50,9 @@ export class App extends Component {
       userName:""
     };
   }
-
   Rand = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
-
   handlePhone = (e) => {
     e.preventDefault();
     this.setState({
@@ -162,7 +159,7 @@ export class App extends Component {
     this.setState({
       eventName: e.target.value,
     });
-    console.log(this.state.eventName)
+    // console.log(this.state.eventName)
   };
   handleLocationEvent = (e) => {
     e.preventDefault();
@@ -228,7 +225,7 @@ export class App extends Component {
     });
   };
   deleteBike = async (id) => {
-    console.log("DDDDDDDDD");
+    // console.log("DDDDDDDDD");
     let bikeId = id;
     let newBikes = await axios.delete(
       `https://${process.env.REACT_APP_BACKEND_URL}/delete/${bikeId}`
@@ -237,11 +234,9 @@ export class App extends Component {
       data: newBikes.data,
     });
   };
-  //////////////////
   addEvent = async (event) => {
     event.preventDefault();
-    console.log("event Added");
-
+    // console.log("event Added");
     const eventsFromData = {
       eventName: this.state.eventName,
       location: this.state.locationEvent,
@@ -259,11 +254,11 @@ export class App extends Component {
     this.setState({
       eventsData: newEvent.data,
     });
-    console.log(this.state.eventsData);
+    // console.log(this.state.eventsData);
   };
 
   deleteEvent = async (id) => {
-    console.log("DDDDDDDDD");
+    // console.log("DDDDDDDDD");
     let EventId = id;
     let newEvents = await axios.delete(
       `https://${process.env.REACT_APP_BACKEND_URL}/deleteEvent/${EventId}`
@@ -272,10 +267,6 @@ export class App extends Component {
       eventsData: newEvents.data,
     });
   };
-
-
-  /////////////////
-
   render() {
     return (
       <Router>
@@ -427,18 +418,11 @@ export class App extends Component {
           <Route path="/aboutus">
             {this.props.auth0.isAuthenticated ? (
               <>
-                {/* <Header
-                  picture={this.props.auth0.user.picture}
-                  name={this.props.auth0.user.name}
-                  myEmail={this.props.auth0.user.email}
-                  tokenz={this.state.tokenz}
-                /> */}
                 <AboutUs />
                 <Footer />
               </>
             ) : (
               <>
-                {/* <Header /> */}
                 <AboutUs />
                 <Footer />
               </>
@@ -450,6 +434,3 @@ export class App extends Component {
   }
 }
 export default withAuth0(App);
-/*
-<Alert variant="danger">Please LLog In First !</Alert>
-*/

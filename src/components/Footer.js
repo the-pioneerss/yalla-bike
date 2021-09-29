@@ -33,12 +33,12 @@ export class Footer extends Component {
         <div class='navbarr'>
           <Navbar id="responsive-navbar-nav">
             <Container>
-              <Navbar.Brand target="_blank" href="" id='font'>
+              <Navbar.Brand target="_blank" href="https://github.com/the-pioneerss" id='font'>
               </Navbar.Brand>
-              <p target="_blank" href="https://github.com/the-pioneerss" id='font'>
+              <Nav.Link target="_blank" href="https://github.com/the-pioneerss" id='font'>
                 All Rights Reserved . The-Pioneers-Team © 2021
-              </p>
-              <Nav.Link target="_blank" href=""></Nav.Link>
+              </Nav.Link>
+              <Nav.Link target="_blank" href="https://github.com/the-pioneerss"></Nav.Link>
             </Container>
           </Navbar>
           <br></br></div>

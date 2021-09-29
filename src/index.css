@@ -7,7 +7,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 font-family: 'Cardo', serif;
-
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -17,15 +16,9 @@ code {
   background-color: #BD4B4B ;
 color : #F0E5CF ;
 }
-#FFONT:hover{
-  background-color: #C8C6C6 ;
-}
-.navbarHeader{
-  background-color: #4B6587 ;
-}
-#nnee{
-  margin : auto ;
-}
+#FFONT:hover{ background-color: #C8C6C6 ;}
+.navbarHeader{  background-color: #4B6587 ;}
+#nnee{ margin : auto ;}
 #lastPMain{
   font-family: 'Cardo', serif;
   width:70% ;
@@ -33,54 +26,27 @@ color : #F0E5CF ;
   margin : auto ;
   margin-top: 5% ;
 }
-.navbarFooter{
-  background-color: #4B6587 ;  
-}
+.navbarFooter{ background-color: #4B6587 ; }
 .ggrriidd{
   display:grid ;
   grid-auto-columns: 40% 40%;
 }
-.lorem{
-  color : #4B6587;
-}
-#root{
-  background-color: white ;
-}
-#offc{
-  background-color: yellow;
-}
-#GREEN{
-  background-color: #198754;
-}
-#YELLOW{
-  background-color: #FFC107;
-}
-#BLUE{
-  background-color: #0DCAF0;
-}
-#DARK{
-  background-color: #212529;
-}
-#LIGHT{
-  background-color: white;
-}
-#RED{
-  background-color: #DC3545;
-}
-#logout{
-  background-color: #BD4B4B ;
-}
+.lorem{  color : #4B6587;}
+#root{  background-color: white ;}
+#offc{  background-color: yellow;}
+#GREEN{  background-color: #198754;}
+#YELLOW{  background-color: #FFC107;}
+#BLUE{  background-color: #0DCAF0;}
+#DARK{background-color: #212529;}
+#LIGHT{background-color: white;}
+#RED{  background-color: #DC3545;}
+#logout{ background-color: #BD4B4B ;}
 #navsbu{
   background-color: white ;
   display: block;
 }
-#hov:hover{
-  background-color: #BD4B4B ;
-
-}
-#logout:hover{
-  background-color: #C8C6C6 ;
-}
+#hov:hover{background-color: #BD4B4B ;}
+#logout:hover{background-color: #C8C6C6 ;}
 #sectionTwo{
   display: grid ;
   grid-template-columns: auto auto;
@@ -114,16 +80,9 @@ color : #F0E5CF ;
   opacity: 0;
   transition: .5s ease;
 }
-.container:hover .overlay {
-  opacity: 1;
-}
-.newSection{
-/* background-color: #a1b4ce; */
-background-color: #E4FBFF;
-}
-#roow{
- margin : 55px ;
-}
+.container:hover .overlay {opacity: 1;}
+.newSection{background-color: #E4FBFF;}
+#roow{ margin : 55px ;}
 #news{
   margin : 30px ;
   width : 100% ;
@@ -150,7 +109,6 @@ background-color: #E4FBFF;
 }
 #fontoff{
   font-family: 'Cardo', serif;
-
 }
 .text {
   font-family : 'Courgette' , cursive ;
@@ -170,29 +128,23 @@ background-color: #E4FBFF;
   font-weight: bolder ;
   font-size: 19px ;
  font-family: 'Cardo', serif;
-
 }
 #navFooter:hover{
   background-color: #e4fbff56;
   cursor:grab ;
  font-family: 'Cardo', serif;
-
 }
 #userMail{
   font-size: 12px ;
   text-align : center ;
  font-family: 'Cardo', serif;
-
 }
 #userInfo{
   text-align : center ;
  font-family: 'Cardo', serif;
-
 }
 .navbarr{
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjpWzsZsLsJZ6Y2jIjh-0gtMT55C6FgZpQKA&usqp=CAU');
-  /*background-repeat: no-repeat;*/
-  /* background-color: #FF9144; */
   background-size: cover;
 }
 .whyUss{
@@ -210,19 +162,15 @@ background-color: #E4FBFF;
   background-color: #E2466E ;
   color : white ;
 }
-#footerLogo{
-  color : white ;
-}
+#footerLogo{color : white ;}
 #rou{
   color : black ;
   background-color: rgba(255, 255, 255, 0.342);
  font-family: 'Cardo', serif;
-
 }
 #rou:hover{
 background-color: rgb(147, 69, 219,0.5);
 font-family: 'Cardo', serif;
-
 }
 .img1car{
   background-color: rgba(255, 255, 255, 0.342);
@@ -235,62 +183,15 @@ font-family: 'Cardo', serif;
   color: black;
   text-align: center;
   left: 0;
-
 }
-
-#moveMe2{
- font-size: 65px;
-}
+#moveMe2{font-size: 65px;}
 #HeroParag{
-  /* text-align: left; */
- /* text-align: justify;
- text-justify: inter-word; */
  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- /* font-weight: bolder; */
  padding-left: 30% ;
 }
 #HeroParagTitle{
-  /* text-align: left; */
  text-align: justify;
  text-justify: inter-word;
  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- /* font-weight: bolder; */
  padding-left: 23% ;
 }
-/*
-.btn-cs {
-  color: #ffffff;
-  background-image: url('https://wallpaperaccess.com/full/1732235.jpg');
-
-  /* background: #CE1CC8; */
-/*  font-family: "Trebuchet MS", sabs-serif;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 10px 30px;
-  margin: 20px 20px 0px 10px;
-  border: 2px solid #E4FBFF;
-  border-radius: 10px;
-  box-shadow: 2px 2px 6px #E4FBFF;
-  transition: .6s ease;
-  width: 600px;
-  margin-top: 50px;
-height:70px;
-}
-.btn-cs:hover {
-  box-shadow: 0px 0px 0px #aaa;
-  color : white ;
-  background: #928ef5;
-}
- .btn-cs.invert:hover {
-  color : white ;
-  background-color: #E2466E;
-  background: #E2466E;
-} 
-.btn-cs.scaleOut:hover {
-  transform: scale(1.1);
-}
-
-.btn-cs.fade:hover {
-  opacity: 0.85;
-}
-*/

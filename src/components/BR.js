@@ -7,6 +7,7 @@ import {
 } from "react-bootstrap";
 import "./Profile.css";
 import axios from "axios";
+import weatherIMG from "../components/weather.gif";
 const NEWS = process.env.REACT_APP_BACKEND_URL;
 
 let today = new Date();
@@ -83,7 +84,7 @@ class BR extends Component {
             {this.state.cardWeather && (
               <Card className="text-center">
                 <Card.Header className="HeaderCard" style={{ width: 500 }}>
-                  Weather In {this.state.place}{" "}
+                  Weather In {this.state.place} Today{" "}
                 </Card.Header>
                 <Card.Body>
                   <Card.Title>
@@ -91,10 +92,12 @@ class BR extends Component {
                     {this.state.weatherData[0].description}{" "}
                   </Card.Title>
                   <Card.Text>
-                    Highs of: {this.state.weatherData[0].max_temp} C
+                  <img src={weatherIMG} alt="PP" className='' width='350'/>
+<br></br>
+                    <b>Highs of: {this.state.weatherData[0].max_temp} C</b>
                   </Card.Text>
                   <Card.Text>
-                    Lows of: {this.state.weatherData[0].low_temp} C
+                    <b>Lows of: {this.state.weatherData[0].low_temp} C</b>
                   </Card.Text>
                 </Card.Body>
               </Card>

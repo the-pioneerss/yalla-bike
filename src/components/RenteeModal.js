@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
-
 class RenteeModal extends Component {
   render() {
     return (
@@ -30,7 +29,6 @@ class RenteeModal extends Component {
                   <option value="Aqaba"> Aqaba </option>
                 </Form.Select>
               </Form.Group>
-
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Gender Icon</Form.Label>
                 <Form.Select onChange={this.props.handleGender}>
@@ -39,7 +37,6 @@ class RenteeModal extends Component {
                   <option value="Female">Female</option>
                 </Form.Select>
               </Form.Group>
-
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Your Phone Number </Form.Label>
                 <Form.Control onChange={this.props.handlePhone}
@@ -47,7 +44,6 @@ class RenteeModal extends Component {
                   placeholder="Please Enter Your Phone Number"
                 />
               </Form.Group>
-
               <Button variant="primary" type="submit">
                 List It!
               </Button>
@@ -63,5 +59,4 @@ class RenteeModal extends Component {
     );
   }
 }
-
 export default RenteeModal;

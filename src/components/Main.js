@@ -13,7 +13,6 @@ import {
   Col,
 } from "react-bootstrap";
 const NEWS = process.env.REACT_APP_BACKEND_URL;
-
 export class Main extends Component {
   constructor(props) {
     super(props);
@@ -33,20 +32,6 @@ export class Main extends Component {
       <>
         {console.log(`https://${NEWS}`)}
         <Carousel fade interval={1000}>
-          {/* <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="http://cdn.shopify.com/s/files/1/0218/5358/articles/why-bicycling-makes-us-happier-spokester-com_1024x1024.png?v=1523559240"
-              alt="First slide"
-              height='700'
-            />
-            <Carousel.Caption >
-              <div id="moveMe"> 
-              <h3 >First slide label</h3>
-              <p id="moveMe2">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </div>
-            </Carousel.Caption>
-          </Carousel.Item> */}
           <Carousel.Item>
             <img
               className="d-block w-100"

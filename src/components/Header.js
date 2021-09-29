@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import { Offcanvas, Button, Image, Col, Row, Container, Navbar, Nav } from 'react-bootstrap';
+import { Offcanvas, Image, Col, Row, Container, Navbar, Nav } from 'react-bootstrap';
 import { withAuth0 } from '@auth0/auth0-react';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogOutButton';
 import { Link } from 'react-router-dom';
-import LOGO from './lo.jpg';
-
 export class Header extends Component {
   constructor(props) {
     super(props);
