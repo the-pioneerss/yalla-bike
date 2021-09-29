@@ -53,7 +53,21 @@ export class Event2 extends Component {
   };
 
   render() {
-    console.log(this.state.eventsData)
+// <<<<<<< abdAboutme
+//     console.log(this.state.eventsData)
+// =======
+//     return (<div className="main">
+//       <div className="container1" >
+//         <div className="container2">
+//           <Card className="bg-dark text-white">
+//             <Card.Img className="image " />
+//             <Card.ImgOverlay className="cardOverlay">
+//               <Card.Text className="textCard">
+//                 IT'S TIME TO GET THE BIKES OUT AND START PEDALLING! SO MUCH FUN IS WAITING FOR YOU ON EVENTS!
+//               </Card.Text>
+//             </Card.ImgOverlay>
+//           </Card>
+// >>>>>>> development
 
     return (
       <div className="main">
@@ -164,6 +178,7 @@ export class Event2 extends Component {
             </Modal.Footer>
           </Modal>
         </div>
+// <<<<<<< abdAboutme
 
         <div className="events">
           <h3> Upcoming Events May Interest You : </h3>
@@ -225,6 +240,115 @@ export class Event2 extends Component {
             }}
           />
         </div>
+// =======
+        <div className="mainButton">
+
+        <Button className="btn-cs scaleOut uu" onClick={() => { this.handleModal() }}>
+
+        <Button className="btn-cs scaleOut uu" variant='#E2466E' onClick={() => { this.handleModal() }}>
+
+          Create An Event
+        </Button>
+        </div>
+        <Modal
+          show={this.state.show}
+          onHide={this.handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton onClick={() => { this.handleModal() }}>
+            <Modal.Title>Create An Event</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form>
+              <Form.Label>Your Name :</Form.Label>
+              <Form.Control type="text" placeholder="Input Your Full Name .." />
+              <br />
+              <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="Input your active Email" />
+              </Form.Group>
+              <Form.Label>Event's Name :</Form.Label>
+              <Form.Control type="text" placeholder="Input Event's Name" />
+              <br />
+              <Form.Label>Location</Form.Label>
+              <Form.Control type="text" placeholder="Input Event's Location" />
+              <br />
+              <Form.Label>Time: </Form.Label>
+              <Form.Control type="time" placeholder="Input Event's Location" />
+              <br />
+              <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                <Form.Label>Further Information About The Event</Form.Label>
+                <Form.Control as="textarea" rows={3} />
+              </Form.Group>
+            </Form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="danger" onClick={() => { this.handleModal() }}>
+              Close
+            </Button>
+            <Button id="Button" className="noselect" onClick={() => { this.onClick1() }}>Create!
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </div>
+      <div className="events">
+        <h3> Upcoming Events May Interest You : </h3>
+        <Card className="card" style={{ width: '50rem' }}>
+          <Card.Header className='eve'>Spring Road Trip</Card.Header>
+          <Card.Body>
+            <Card.Title>IF YOU'RE 40's, THIS IS FOR YOU!</Card.Title>
+            <Card.Text>
+              A long-distance journey on the road. Typically, road trips are long distances traveled by automobile..
+              <br /> <strong>Location: </strong>  Alsalt ,Jordan.
+
+              <br /> <strong>Time: </strong> 12:00pm-2:00pm ,Saturday September 25, 2021
+            </Card.Text>
+            {this.state.buttonEnabled2 &&
+            <Button className="cardBut " onClick={this.onClick3} >Join!</Button>}
+            {!this.state.buttonEnabled2&& 
+            <Button className="cardBut "variant="success" onClick={this.onClick4}>Joined!</Button>}
+          </Card.Body>
+          </Card>
+          <Card className="card">
+          <Card.Header>Morning Road Trip</Card.Header>
+
+              <br /> <strong>Time: </strong> 12:00pm ,Saturday September 25, 2021
+            </Card.Text>
+            {this.state.buttonEnabled2 &&
+            <Button className="cardBut " variant='warning' onClick={this.onClick3} >Join!</Button>}
+            {!this.state.buttonEnabled2&& 
+            <Button className="cardBut " variant="warning" onClick={this.onClick4}>Joined</Button>}
+          </Card.Body>
+          </Card>
+          <Card className="card" style={{ width: '50rem' }}>
+          <Card.Header className='eve'>Morning Road Trip</Card.Header>
+
+          <Card.Body>
+            <Card.Title>Everyday morning trip</Card.Title>
+            <Card.Text>
+              With supporting text below as a natural lead-in to additional content.
+              <br /> <strong>Location: </strong> Amman ,Jordan.
+              <br /> <strong>Time: </strong>  8:00am-10:00am ,Saturday Octoper 25, 2021
+            </Card.Text>
+            {this.state.buttonEnabled &&
+            <Button className="cardBut " onClick={this.onClick1} >Join!</Button>}
+            {!this.state.buttonEnabled&& 
+            <Button className="cardBut "variant="success" onClick={this.onClick2}>Joined!</Button>}
+
+              <br /> <strong>Time: </strong>  8:00am ,Saturday Octoper 25, 2021
+            </Card.Text>
+            {this.state.buttonEnabled &&
+            <Button className="cardBut " variant="warning" onClick={this.onClick1} >Join!</Button>}
+            {!this.state.buttonEnabled&& 
+            <Button className="cardBut "variant="warning" onClick={this.onClick2}>Joined!</Button>}
+
+          </Card.Body>
+        </Card>
+      </div>
+      <div>
+        <Dialog ref={(component) => { this.dialog = component }} />
+// >>>>>>> development
       </div>
     );
   }
