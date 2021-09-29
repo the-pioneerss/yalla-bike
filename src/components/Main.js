@@ -139,7 +139,7 @@ export class Main extends Component {
             <br />
             <br />
             <Row className="row-grid align-items-center">
-              <Col md="6">
+            
                 <Card className="bg-default shadow border-0">
                   <CardImg
                     alt="..."
@@ -148,8 +148,7 @@ export class Main extends Component {
                     style={{ height: 550 }}
                   />
                 </Card>
-              </Col>
-              <Col md="6">
+              
                 <div className="pl-md-5">
                   <h3 id="HeroParagTitle" className="text-center">Why US !?</h3>
                   <h4 id="HeroParag">
@@ -167,7 +166,7 @@ export class Main extends Component {
                     Started!
                   </h4>
                 </div>
-              </Col>
+             
             </Row>
           </Container>
           <br />
