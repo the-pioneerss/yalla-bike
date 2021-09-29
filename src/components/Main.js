@@ -82,22 +82,22 @@ export class Main extends Component {
                 <Row className="row-grid">
                   <Col lg="1">
                   </Col>
-                  <Col lg="4">
+                  <Col lg="5">
                     <Card className="card-lift--hover shadow border-0">
                       <Button
-                        className="mt-4"
+                        className="mt-5"
                         variant="light"
                         tag={Link}
                         to="/rent"
                         href="/rent"
                       >
-                        <Card.Body className="py-4">
+                        <Card.Body className="py-5">
                           <CardImg variant='top' src='https://bikerentalmanager.com/wp-content/uploads/BikeApp_DM_DepositphotosSmall-900x450.png' height='160' />
                           <br></br><br></br>
                           <h6 className="text-danger text-uppercase">
                             Yalla Rent !!
                           </h6>
-                          <p className="description mt-3">
+                          <p className="description mt-5">
                             loremipsum loremipsum loremipsum loremipsum
                             loremipsum loremipsum loremipsum loremipsum
                           </p>
@@ -105,24 +105,24 @@ export class Main extends Component {
                       </Button>
                     </Card>
                   </Col>
-                  <Col lg="2">
+                  <Col lg="1">
                   </Col>
-                  <Col lg="4">
+                  <Col lg="5">
                     <Card className="card-lift--hover shadow border-0">
                       <Button
-                        className="mt-4"
+                        className="mt-5"
                         variant="light"
                         tag={Link}
                         to="/event"
                         href="/event"
                       >
-                        <Card.Body className="py-4">
+                        <Card.Body className="py-5">
                           <CardImg variant='top' src='https://visitelizabethcity.com//images/event_photos/Tarwheel2019_riverfront.jpg' height='160' />
                           <br></br><br></br>
                           <h6 className="text-success text-uppercase">
                             Yalaa Events !!
                           </h6>
-                          <p className="description mt-3">
+                          <p className="description mt-5">
                             loremipsum loremipsum loremipsum loremipsum
                             loremipsum loremipsum loremipsum loremipsum
                           </p>
@@ -139,7 +139,7 @@ export class Main extends Component {
         <section class="whyUssImg">
           <Container>
             <Row className="row-grid align-items-center">
-              <Col md="6">
+              <Col md="8">
                 <Card className="bg-default shadow border-0">
                   <CardImg
                     alt="..."

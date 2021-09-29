@@ -18,14 +18,13 @@ export class Header extends Component {
           <Navbar collapseOnSelect expand="true" id="responsive-navbar-nav">
             <Container>
               <Navbar.Brand href="#home" id="responsive-navbar-nav">
-                <pre>       <img
+                <pre><Navbar.Toggle onClick={this.handleShow} aria-controls="responsive-navbar-nav" />    <img
                   alt=""
                   src="https://cdn-icons-png.flaticon.com/512/706/706170.png"
                   width="27"
                   height="27" />{' '}
                   Yalla Bike</pre>
               </Navbar.Brand>
-              <Navbar.Toggle onClick={this.handleShow} aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav placement={'buttom'} className="me-auto">
                   <Nav.Link href="#pricing" id='hov'>
