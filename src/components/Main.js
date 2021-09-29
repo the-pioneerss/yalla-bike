@@ -131,7 +131,7 @@ export class Main extends Component {
                           <br></br>
                           <br></br>
                           <h6 className="text-success text-uppercase">
-                            Yalaa Events !
+                            Yalla Events !
                           </h6>
                           <p className="description mt-3">
                             Get Ready and Join The Fun With The Community
@@ -149,12 +149,10 @@ export class Main extends Component {
         <br></br>
         <br></br>
         <br></br>
-        <section className="section pb-0 bg-gradient-danger"></section>
         <section class="whyUssImg">
           <Container>
             <br />
             <br />
-
             <Row className="row-grid align-items-center">
               <Col md="6">
                 <Card className="bg-default shadow border-0">
@@ -162,17 +160,14 @@ export class Main extends Component {
                     alt="..."
                     src="http://cdn.shopify.com/s/files/1/0218/5358/articles/why-bicycling-makes-us-happier-spokester-com_1024x1024.png?v=1523559240"
                     top
-                    style={{ height: 500 }}
+                    style={{ height: 550 }}
                   />
                 </Card>
               </Col>
-              <Col md="5">
+              <Col md="6">
                 <div className="pl-md-5">
-                  <div className="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
-                    <i className="ni ni-settings" />
-                  </div>
-                  <h3 className="text-center">Why US !?</h3>
-                  <h4 className="HeroParag">
+                  <h3 id="HeroParagTitle" className="text-center">Why US !?</h3>
+                  <h4 id="HeroParag">
                     We Are The First Jordanian Team To Create an App That Aims
                     Directly To Save the Environment By Replacing The
                     Traditional Gas-Transportation Methods With An Eco-Friendly

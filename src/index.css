@@ -142,7 +142,6 @@ background-color: #E4FBFF;
   font-family: 'Cardo', serif;
   color : white ;
   font-size: 19px ;
-
 }
 #font{
   font-family: 'Cardo', serif;
@@ -242,11 +241,21 @@ font-family: 'Cardo', serif;
 #moveMe2{
  font-size: 65px;
 }
-.HeroParag{
+#HeroParag{
+  /* text-align: left; */
+ /* text-align: justify;
+ text-justify: inter-word; */
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ /* font-weight: bolder; */
+ padding-left: 30% ;
+}
+#HeroParagTitle{
   /* text-align: left; */
  text-align: justify;
  text-justify: inter-word;
- font-family: 'Cardo', serif;
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ /* font-weight: bolder; */
+ padding-left: 23% ;
 }
 /*
 .btn-cs {

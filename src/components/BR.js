@@ -111,10 +111,10 @@ class BR extends Component {
                           </header>
                           <div className="details">
                             <h3 className="date">{today}</h3>
-                            <h5 className="title">
+                            <h6 className="title">
                               {" "}
                               {element.username.toUpperCase()} <br />{" "}
-                            </h5>
+                            </h6>
                             <span> is renting </span>{" "}
                             <h2 className="venue">
                               Phone Number: {element.Phone}
@@ -164,10 +164,10 @@ class BR extends Component {
                       </header>
                       <div className="details">
                         <h3 className="date">{today}</h3>
-                        <h5 className="title">
+                        <h6 className="title">
                           {" "}
                           {e.username.toUpperCase()} <br />{" "}
-                        </h5>
+                        </h6>
                         <span> is renting </span>{" "}
                         <h2 className="venue">Phone Number: {e.Phone}</h2>
                         <h2 className="venue">Location: {e.location}</h2>
