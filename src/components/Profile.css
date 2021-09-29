@@ -19,6 +19,8 @@
   margin: auto;
   display: block;
 }
+@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
+
 .buttonJS button > .base { display: block; }
 .buttonJS button > .onHover { display: none; }
 .buttonJS button:hover> .base { display: none; }
@@ -61,8 +63,8 @@
 .buttonJS h2{
   margin-bottom: 20px;
   font-weight: 500;
-  font-size: 70px;
-  font-family : 'Courgette' , cursive ;
+  font-size: 50px;
+  font-family: 'Cardo', serif;
   TEXT-ALIGN: center;
 }
 .lists {
