@@ -152,9 +152,10 @@ export class AboutUs extends Component {
           />
           <Carousel.Caption>
             <Card style={{ width: "16rem" }} className="abdCard">
-              <Card.Img variant="top" src={image1} style={{height:"10rem"}}/>
-              <Card.Body>
-                <Card.Title>Abdallah Alabed</Card.Title>
+              <Card.Img variant="top" src={image1} style={{height:"13rem"}}/>
+              <Card.Body style={{height:"13rem"}}>
+              <br/>
+                <Card.Title className="titleCardUS">Abdallah Alabed</Card.Title>
                 <Card.Text>
                    Mechatronics Engineer and a Future Web Developer
                 </Card.Text>
@@ -164,9 +165,10 @@ export class AboutUs extends Component {
 
           <Carousel.Caption>
             <Card style={{ width: "16rem" }} className="mhmdCard">
-              <Card.Img variant="top" src={image4} style={{height:"12rem"}}/>
-              <Card.Body>
-                <Card.Title> Mohammad Alwrekat </Card.Title>
+              <Card.Img variant="top" src={image4} style={{height:"13rem"}}/>
+              <Card.Body style={{height:"13rem"}}>
+                <br/>
+                <Card.Title className="titleCardUS"> Mohammad Alwrekat </Card.Title>
                 <Card.Text>
                   Creative Designer and a Future Web Developer
                 </Card.Text>
@@ -176,9 +178,10 @@ export class AboutUs extends Component {
 
           <Carousel.Caption>
             <Card style={{ width: "16rem" }} className="dinaCard">
-              <Card.Img variant="top" src={image2} style={{height:"10rem"}}/>
-              <Card.Body>
-                <Card.Title> dina abuzenah </Card.Title>
+              <Card.Img variant="top" src={image2} style={{height:"13rem"}}/>
+              <Card.Body style={{height:"13rem"}}>
+              <br/>
+                <Card.Title className="titleCardUS"> dina abuzenah </Card.Title>
                 <Card.Text>
                   Telecommunication Engineer and a Future Web Developer
                 </Card.Text>
@@ -188,9 +191,10 @@ export class AboutUs extends Component {
 
           <Carousel.Caption>
             <Card style={{ width: "16rem" }} className="ehabCard">
-              <Card.Img variant="top" src={image3} style={{height:"10rem"}}/>
-              <Card.Body>
-                <Card.Title> Ehab Al-shrida </Card.Title>
+              <Card.Img variant="top" src={image3} style={{height:"13rem"}}/>
+              <Card.Body style={{height:"13rem"}}>
+              <br/>
+                <Card.Title className="titleCardUS"> Ehab Al-shrida </Card.Title>
                 <Card.Text>
                   Telecommunication Engineer and a Future Web Developer
                 </Card.Text>
@@ -200,9 +204,10 @@ export class AboutUs extends Component {
 
           <Carousel.Caption>
             <Card style={{ width: "16rem" }} className="randCard">
-              <Card.Img variant="top" src={image5} style={{height:"12rem"}}/>
-              <Card.Body>
-                <Card.Title> Rand Albqour </Card.Title>
+              <Card.Img variant="top" src={image5} style={{height:"13rem"}}/>
+              <Card.Body style={{height:"13rem"}}>
+              <br/>
+                <Card.Title className="titleCardUS"> Rand Albqour </Card.Title>
                 <Card.Text>
                   Civil Engineer and a Future Web Developer
                 </Card.Text>

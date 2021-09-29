@@ -92,6 +92,7 @@
   left: 80px;
   background-color: rgba(0, 0, 0, 0.3);
   font-family: 'Cardo', serif;
+  padding: 20px;
 }
 .page1_2 {
   top: 250px;
@@ -100,13 +101,15 @@
   margin: auto;
   font-family: 'Cardo', serif;
   margin-left: 450px;
-  /* background-color: rgba(0, 0, 0, 0.100); */
+    /* background-color: rgba(0, 0, 0, 0.100); */
 }
 .para2 {
   width: 650px;
   left: 80px;
   background-color: rgba(0, 0, 0, 0.3);
   font-family: 'Cardo', serif;
+  padding: 20px;
+
 }
 .h2Right {
   top: 350px;
@@ -146,7 +149,7 @@
 .abdCard {
   /* background-color: transparent; */
   color: black;
-  bottom: 300px;
+  bottom: 150px;
   /* top: 80px; */
   left: 0px;
   font-family: 'Cardo', serif;
@@ -159,7 +162,7 @@
   /* background-color: transparent; */
   color: black;
   font-family: 'Cardo', serif;
-  bottom: 300px;
+  bottom: 150px;
   /* top: 50px; */
   left: 600px;
   /* border: none; */
@@ -170,7 +173,7 @@
   /* background-color: transparent; */
   color: black;
   font-family: 'Cardo', serif;
-  bottom: 300px;
+  bottom: 150px;
   /* top: 80px; */
   left: 300px;
   /* border: none; */
@@ -181,18 +184,19 @@
   /* background-color: transparent; */
   color: black;
   font-family: 'Cardo', serif;
-  bottom: 300px;
+  bottom: 150px;
   /* top: 80px; */
   right: 300px;
   /* border: none; */
   font-size: 20px;
   border-radius: 5%;
+  
 }
 .randCard {
   /* background-color: transparent; */
   color: black;
   font-family: 'Cardo', serif;
-  bottom: 300px;
+  bottom: 150px;
   /* top: 50px; */
   right: 600px;
   /* border: none; */
@@ -201,6 +205,9 @@
 }
 .bottomPara{
     font-family: 'Cardo', serif;
+}
+.titleCardUS{
+    font-weight: bolder;
 }
 /* =======
 
@@ -276,6 +283,6 @@ right:250px;
   .cardText{
   align-items: center; */
   
-  }
+  /* } */
 /* >>>>>>> development
  */

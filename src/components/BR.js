@@ -128,12 +128,23 @@ class BR extends Component {
                             <h4 className="price">1.5$/Hr</h4>
                           </div>
                           <footer>
-                            <Button
-                              onClick={this.props.handleShowModalRental}
-                              className="yalla"
-                            >
-                              Yalla Bike!
-                            </Button>
+                          {this.props.name === element.username ?
+                          <Button
+                            onClick={() => this.props.deleteBike(element._id)}
+                            className="yalla"
+                            variant='danger'
+                          >
+                            Delete
+                          </Button>
+                          :
+
+                          <Button
+                            onClick={this.props.handleShowModalRental}
+                            className="yalla"
+                          >
+                            Yalla Bike!
+                          </Button>
+                        }
                           </footer>
                         </article>
                       </section>
