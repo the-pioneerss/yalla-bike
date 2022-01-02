@@ -1,0 +1,223 @@
+import { Link } from "react-router-dom";
+import React, { Component } from "react";
+import Axios from "axios";
+import { withAuth0 } from "@auth0/auth0-react";
+import Footer from "./Footer";
+import {
+  CardImg,
+  Card,
+  Button,
+  Carousel,
+  Container,
+  Row,
+  Col,
+} from "react-bootstrap";
+const NEWS = process.env.REACT_APP_BACKEND_URL;
+export class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      news: [],
+    };
+  }
+  componentDidMount = () => {
+    Axios.get(`https://${NEWS}/articls`).then((res) => {
+      this.setState({
+        news: res.data.cache.data,
+      });
+    });
+  };
+  render() {
+    return (
+      <>
+        {console.log(`https://${NEWS}`)}
+        <Carousel fade interval={1000}>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="https://images.pexels.com/photos/5446306/pexels-photo-5446306.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt="Second slide"
+              height="700"
+            />
+            <Carousel.Caption>
+              <h1 id="moveMe2">Yalla Bike!</h1>
+              <h3>Join the fun, create events and make friends.</h3>
+              <br />
+              <br />
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src="https://images.pexels.com/photos/5061108/pexels-photo-5061108.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+              alt="First slide"
+              height="700"
+            />
+            <Carousel.Caption>
+              <h1 id="moveMe2">Yalla Bike!</h1>
+              <h3>Join the fun, create events and make friends.</h3>
+              <br />
+              <br />
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+        <br></br>
+        <br></br>
+        <br></br>
+        <section className="section section-lg pt-lg-0 mt--200">
+          <Container>
+            <div className="YallaButtons">
+              <Card className="card-lift--hover shadow border-0">
+                <Button
+                  className="mt-4"
+                  variant="light"
+                  tag={Link}
+                  to="/rent"
+                  href="/rent"
+                >
+                  <Card.Body className="py-4">
+                    <CardImg
+                      variant="top"
+                      src="https://bikerentalmanager.com/wp-content/uploads/BikeApp_DM_DepositphotosSmall-900x450.png"
+                      height="160"
+                    />
+                    <br></br>
+                    <br></br>
+                    <h6 className="text-danger text-uppercase">Yalla Rent !</h6>
+                    <p className="description mt-3">
+                      Rent or Lease a Bike And Help The Community
+                    </p>
+                  </Card.Body>
+                </Button>
+              </Card>
+
+              <Card className="card-lift--hover shadow border-0">
+                <Button
+                  className="mt-4"
+                  variant="light"
+                  tag={Link}
+                  to="/event"
+                  href="/event"
+                >
+                  <Card.Body className="py-4">
+                    <CardImg
+                      variant="top"
+                      src="https://visitelizabethcity.com//images/event_photos/Tarwheel2019_riverfront.jpg"
+                      height="160"
+                    />
+                    <br></br>
+                    <br></br>
+                    <h6 className="text-success text-uppercase">
+                      Yalla Events !
+                    </h6>
+                    <p className="description mt-3">
+                      Get Ready and Join The Fun With The Community
+                    </p>
+                  </Card.Body>
+                </Button>
+              </Card>
+            </div>
+          </Container>
+        </section>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <section className="whyUssImg">
+          <Container>
+            <br />
+            <br />
+            <Row className="row-grid align-items-center">
+              <div className="WhyUspara">
+                <Card className="bg-default shadow border-0">
+                  <CardImg
+                    alt="..."
+                    src="http://cdn.shopify.com/s/files/1/0218/5358/articles/why-bicycling-makes-us-happier-spokester-com_1024x1024.png?v=1523559240"
+                    style={{ height: 550 }}
+                  />
+                </Card>
+
+                <div className="pl-md-5">
+                  <h3 id="HeroParagTitle" className="text-center">
+                    Why Us !?
+                  </h3>
+                  <h4 id="HeroParag">
+                    We Are The First Jordanian Team To Create an App That Aims
+                    Directly To Save the Environment By Replacing The
+                    Traditional Gas-Transportation Methods With An Eco-Friendly
+                    Bicycles That Allows People To Have a Light Workout While
+                    Finishing Their Trips In a Faster Way Than Walking.
+                    <br />
+                    We Are Creating a Community That Cares About the
+                    Environmental Situation In Jordan To Create a Better Future
+                    For Us and Our Kids
+                    <br />
+                    So What Are You Waiting For, SignUp and Lets Get You
+                    Started!
+                  </h4>
+                </div>
+              </div>
+            </Row>
+          </Container>
+          <br />
+          <br />{" "}
+        </section>
+        <section className="newSection">
+          <br></br>
+          <br></br>
+          <h1 id="fontoff" className="text-center">
+            Why We Are Doing This ?!
+          </h1>
+          <br></br>
+          <br></br>
+          <section className="section">
+            <div className="row">
+              {this.state.news.map((item) => {
+                return (
+                  <>
+                    <Col id="nnee" lg="5">
+                      <Card className="card-lift--hover shadow border-0">
+                        <Card.Body className="py-4">
+                          <br></br>
+                          <br></br>
+                          <h6
+                            variant="top"
+                            className="text-danger text-uppercase"
+                          >
+                            "{item.title}"
+                          </h6>
+                          <p className="description mt-3">{item.description}</p>
+                          <Button
+                            className="mt-4"
+                            id="buttonNews"
+                            href={item.sourseUrl}
+                            target="_blank"
+                          >
+                            Show Full Article
+                          </Button>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  </>
+                );
+              })}
+              <br />
+              <h4 id="lastPMain" className="text-center">
+                With The Increase In The Earths' Temperature And The Deadly
+                Results We See In The News On Daily Basis From The Pollution We
+                As A Youth Have To Step Up And Help The Planet We Live On So We
+                All Can Survive!
+                <br />
+                Join Our Community And Help Us Save Planet Earth!
+              </h4>
+            </div>
+          </section>
+          <br></br>
+          <br></br>
+        </section>
+        <Footer />
+      </>
+    );
+  }
+}
+export default withAuth0(Main);

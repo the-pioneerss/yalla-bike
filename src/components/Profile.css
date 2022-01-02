@@ -1,0 +1,177 @@
+ 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,700italic);
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+  .buttonJS button { 
+    font-family: 'Cardo', serif;
+    position: relative;
+  width: 70%;
+  height: 4rem;
+  font-size: 1.25rem;
+  background-image: url('https://wallpaperaccess.com/full/1732235.jpg');
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  color: #F8F8FA;
+  transition: 0.3s all;
+  margin-top: -4rem;
+  margin: auto;
+  display: block;
+}
+.buttonJS button > .base { display: block; }
+.buttonJS button > .onHover { display: none; }
+.buttonJS button:hover> .base { display: none; }
+.buttonJS button:hover > .onHover { display: block; }
+.buttonJS button:focus { 
+  outline: none; 
+  border: none; 
+}
+.buttonJS button:before { 
+  content: '';
+  position: absolute;
+  height: 2rem;
+  width: 3rem;
+  top: 0; left: 0;
+  border-top: 0.125rem solid blue;
+  border-left: 0.125rem solid  blue;
+  transition: 0.3s all;
+}
+.buttonJS button:after { 
+  content: '';
+  position: absolute;
+  height: 2rem;
+  width: 3rem;
+  bottom: 0; right: 0;
+  border-bottom: 0.125rem solid  blue;
+  border-right: 0.125rem solid  blue;
+  transition: 0.3s all;
+}
+.buttonJS button:hover:before,
+.buttonJS button:hover:after {
+  width: calc(100%);
+  height: calc(100%);
+}
+.buttonJS button:active {
+  -webkit-transform: scale(0.9,0.9);
+     -moz-transform: scale(0.9,0.9);
+      -ms-transform: scale(0.9,0.9);
+          transform: scale(0.9,0.9);
+}
+.buttonJS h2{
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 50px;
+  font-family: 'Cardo', serif;
+  TEXT-ALIGN: center;
+}
+.lists {
+  font-weight: 500;
+  font-size: 50px;
+  margin-top: 100px;
+  margin-bottom: 70px;
+  font-family: 'Cardo', serif;
+  TEXT-ALIGN: center;
+  justify-content: center;
+  align-items: center;
+}
+.FilterMe{
+  background-image: url('https://wallpaperaccess.com/full/1732235.jpg');
+ justify-items: center;
+margin: auto;
+  text-decoration: none;
+ display: block;
+  font-size: 16px;
+  width: 500px;
+  height: 40px;
+  text-align: center;
+margin-bottom: 20px;
+}
+.text-center{
+  margin: auto;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 500px;
+}
+.HeaderCard{
+  background-image: url('https://wallpaperaccess.com/full/1732235.jpg');
+  color: white;
+}
+.event {
+  width: 300px;
+  height:570px;
+  background: white;
+  margin:auto;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.8);
+  letter-spacing: -0.5px;
+  text-align: center;
+  border-radius: 2%;
+  background-image: url('https://wallpaperaccess.com/full/1732235.jpg');
+  background-repeat:no-repeat;
+  margin-bottom: 40px ;
+}
+.title {
+  display: block;
+  color: #555; 
+} 
+.test {
+  width: 100%; 
+  margin-top: 15px;
+}
+.details {
+  padding: 0 0.5em;
+  border-bottom: 1px solid #EEEEEE;
+}
+.date {
+  color: #666A73;
+  font-size: 14px;
+  font-weight: 400;
+}
+.venue {
+  color: #ADB0B6;
+  font-size: 13px;
+  padding: 8px 6px;
+}
+.tag { 
+  font-size: 14px;
+  color: #555;
+  margin: 10px 6px;
+  text-transform: lowercase;
+}
+.yalla{
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  padding-top: 12px; 
+  padding-bottom: 12px;
+  background-color: #7037ca;
+}
+.yallaDelete{
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  padding-top: 12px; 
+  padding-bottom: 12px;
+}
+.price {
+  background: white;
+  opacity: 0.8;
+}
+.text{font-size: 15px;}
+.title{ margin : auto ;}
+.user-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #388a8b;
+  height: 200px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +6,204 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+font-family: 'Cardo', serif;
+}
+
+.WhyUspara{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+#FFONT{
+  background-color: #BD4B4B ;
+color : #F0E5CF ;
+}
+#FFONT:hover{ background-color: #C8C6C6 ;}
+.navbarHeader{  background-color: #4B6587 ;}
+#nnee{ margin : auto ;}
+#lastPMain{
+  font-family: 'Cardo', serif;
+  width:70% ;
+  text-align : center ;
+  margin : auto ;
+  margin-top: 5% ;
+}
+.navbarFooter{ background-color: #4B6587 ; }
+.ggrriidd{
+  display:grid ;
+  grid-auto-columns: 40% 40%;
+}
+.lorem{  color : #4B6587;}
+#root{  background-color: white ;}
+#offc{  background-color: yellow;}
+#GREEN{  background-color: #198754;}
+#YELLOW{  background-color: #FFC107;}
+#BLUE{  background-color: #0DCAF0;}
+#DARK{background-color: #212529;}
+#LIGHT{background-color: white;}
+#RED{  background-color: #DC3545;}
+#logout{ background-color: #BD4B4B ;}
+#navsbu{
+  background-color: white ;
+  display: block;
+}
+#hov:hover{background-color: #BD4B4B ;}
+#logout:hover{background-color: #C8C6C6 ;}
+#sectionTwo{
+  display: grid ;
+  grid-template-columns: auto auto;
+  gap: 100;
+}
+#sectionTwoImg{
+  width:60% ;
+  height : 80% ;
+  margin-left: 20%;
+}
+.mainIMG{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.container{
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+.container:hover .overlay {opacity: 1;}
+.newSection{background-color: #E4FBFF;}
+#roow{ margin : 55px ;}
+#news{
+  margin : 30px ;
+  width : 100% ;
+}
+#logo{
+  margin-right: 80%;
+  display:inline-block ;
+}
+.font{
+  font-family: 'Cardo', serif;
+  color : white ;
+  font-size: 12px ;
+  margin : auto ;
+}
+#fontlo{
+  font-family: 'Cardo', serif;
+  color : white ;
+  font-size: 19px ;
+}
+#font{
+  font-family: 'Cardo', serif;
+  color : #f3f1ed ;
+  font-size: 12px ;
+}
+#fontoff{
+  font-family: 'Cardo', serif;
+}
+.text {
+  font-family : 'Courgette' , cursive ;
+  color: black ;
+  font-size: 25px;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: bolder ;
+}
+#navFooter{
+  color : white ;
+  font-weight: bolder ;
+  font-size: 19px ;
+ font-family: 'Cardo', serif;
+}
+#navFooter:hover{
+  background-color: #e4fbff56;
+  cursor:grab ;
+ font-family: 'Cardo', serif;
+}
+#userMail{
+  font-size: 12px ;
+  text-align : center ;
+ font-family: 'Cardo', serif;
+}
+#userInfo{
+  text-align : center ;
+ font-family: 'Cardo', serif;
+}
+.navbarr{
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjpWzsZsLsJZ6Y2jIjh-0gtMT55C6FgZpQKA&usqp=CAU');
+  background-size: cover;
+}
+.whyUss{
+  background-color: #EDEEF7;
+}
+.whyUssImg{
+  background-color: #EDEEF7;
+  margin : auto ;
+}
+#buttonNews{
+  background-color: #CE1CC8;
+  color : white ;
+}
+#logOutButton{
+  background-color: #E2466E ;
+  color : white ;
+}
+#footerLogo{color : white ;}
+#rou{
+  color : black ;
+  background-color: rgba(255, 255, 255, 0.342);
+ font-family: 'Cardo', serif;
+}
+#rou:hover{
+background-color: rgb(147, 69, 219,0.5);
+font-family: 'Cardo', serif;
+}
+.img1car{
+  background-color: rgba(255, 255, 255, 0.342);
+  color: #212529;
+}
+#moveMe{
+  float: left;
+  margin-bottom: 500px;
+  margin-right: 200px;
+  color: black;
+  text-align: center;
+  left: 0;
+}
+#moveMe2{font-size: 65px;}
+#HeroParag{
+  font-family: 'Cardo', serif;
+  padding-top: 30px;
+ 
+}
+#HeroParagTitle{
+ text-align: justify;
+ text-justify: inter-word;
+ font-family: 'Cardo', serif;
+ padding-top: 30px;
+ 
+}
+.YallaButtons{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
